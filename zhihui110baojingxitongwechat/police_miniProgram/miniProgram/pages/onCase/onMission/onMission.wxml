@@ -1,0 +1,92 @@
+<view class='container'>
+  <header>
+    <view class="top flex-box flex-h-ce flex-d-center">
+      <image src="../../../assets/images/x.png"></image>
+      <text>正在出警</text>
+      <image src="../../../assets/images/top_menu.png"></image>
+    </view>
+  </header>
+  <view class="content">
+      <view class="map">
+        <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 500px;"></map>
+      </view>
+      <!-- 底部tabbar -->
+      <view class="bottom">
+        <view class="carInfo flex-box">
+          <view class="license flex-box-v">
+            <view class="number">粤S-0007<span style='color:#f00'>警</span></view>
+            <view class="name flex-box flex-h-ce"><text>刘警官</text><view class="rate">5.0</view></view>
+          </view>
+      </view>
+      <view class="tab flex-box flex-dv-center">
+          <view class="tab-item flex-box-v flex-center-center" catchtap="openTab">
+              <image src="../../../assets/images/vedio.png"></image>
+              <text>案发现场</text>
+          </view>
+          <view class="tab-item flex-box-v flex-center-center">
+              <image src="../../../assets/images/message.png"></image>
+              <text>发消息</text>
+          </view>
+          <view class="tab-item flex-box-v flex-center-center" catchtap="openBox">
+              <image src="../../../assets/images/call.png"></image>
+              <text>请求增援</text>
+          </view>
+          <view class="tab-item flex-box-v flex-center-center">
+              <image src="../../../assets/images/cancel.png"></image>
+              <text>取消报警</text>
+          </view>
+          <view class="tab-item flex-box-v flex-center-center">
+              <image src="../../../assets/images/address.png"></image>
+              <text>选择路线</text>
+          </view>
+          <view class="dot">
+            <image src="../../../assets/images/bot.png"></image>
+          </view>
+      </view>
+      </view>
+      <!-- 增援详情 -->
+      <view class="reinforce {{isOpen ? 'openscal' : 'hidescal'}}" wx:if='{{isOpen}}'>
+          <view class="reinforce-title"><text>增援详情</text></view>
+          <view class="personNumber li flex-box flex-h-ce">
+              <text>增援人数</text>
+              <input placeholder="人数"></input>
+          </view>
+          <view class="personNumber li flex-box flex-h-ce">
+              <text>增援武器</text>
+              <input placeholder="警枪、警棍、防弹衣..."></input>
+          </view>
+          <view class="personNumber li flex-box flex-h-ce">
+              <text>增援车辆</text>
+              <input placeholder="警车两辆"></input>
+          </view>
+          <view class="personNumber li flex-box flex-h-ce">
+              <text>其他增援</text>
+              <input placeholder="人数"></input>
+          </view>
+          <button type="primary">确定</button>
+      </view>
+      <!-- 案发现场 -->
+      <view class="scene {{openTab ? 'openscal' : 'hidescal'}}" wx:if='{{openTab}}'>
+          <view class="scene-title"><text>案发现场</text></view>
+          <view class="scene-info">
+              <swiper 
+              indicator-dots="true" 
+              interval="2000" 
+              duration="200"
+              indicator-color="#cccccc"
+              indicator-active-color="#ffffff">
+                <block wx:for='{{imgs}}'>
+                  <swiper-item>
+                    <view class="image"><image src="{{item.url}}"></image></view>
+                  </swiper-item>
+                </block>
+                <swiper-item>
+                  <view class="video"><video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video></view>
+                </swiper-item>
+              </swiper>
+          </view>
+      </view>
+  </view>
+  <!-- 蒙层 -->
+  <view class="mask" catchtap="closeMask" wx:if="{{isOpen || openTab}}"></view>
+</view>

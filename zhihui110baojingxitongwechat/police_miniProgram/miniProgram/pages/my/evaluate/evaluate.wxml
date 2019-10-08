@@ -1,0 +1,150 @@
+<view class='container'>
+  <header>
+    <view class="top flex-box flex-h-ce flex-d-center">
+      <image src="../../../assets/images/x.png"></image>
+      <text>我的评价</text>
+      <image src="../../../assets/images/top_menu.png"></image>
+    </view>
+  </header>
+  <view class="content">
+    <!-- <view class="li flex-box-v flex-center-center">
+      <view class="title">
+        <text>累计评价</text>
+        <image class="icon" src="../../../assets/images/arrow-right.png" wx:if="{{isR}}"></image>
+        <image class="icon" src="../../../assets/images/arrow-down.png"></image>
+      </view>
+      <view class="flex-box-v flex-center-center star">
+        <view class="overallRating flex-box flex-h-ce">
+          <block wx:for='{{star}}' wx:key='{{item.id}}'>
+            <image src="{{star1}}"></image> 
+          </block>
+          <view class="rating">
+            <text>4.8</text>分</view>
+          <text>共88人</text>
+        </view>
+        <view class="star-item flex-box">
+          <block wx:for='{{star}}' wx:key='{{item.id}}'>
+            <image src="{{star1}}"></image>
+          </block>
+          <text>5分</text>
+          <progress percent="91.37" show-info activeColor='#EEB422' border-radius='50' />
+        </view>
+        <view class="star-item flex-box flex-h-ce">
+          <block wx:for='{{star}}' wx:key='{{item.id}}'>
+            <image src="{{star1}}"></image>
+          </block>
+          <text>4分</text>
+          <progress percent="4.21" show-info activeColor='#EEB422' border-radius='50' />
+        </view>
+        <view class="star-item flex-box flex-h-ce">
+          <block wx:for='{{star}}' wx:key='{{item.id}}'>
+            <image src="{{star1}}"></image>
+          </block>
+          <text>3分</text>
+          <progress percent="2.34" show-info activeColor='#EEB422' border-radius='50' />
+        </view>
+        <view class="star-item flex-box flex-h-ce">
+          <block wx:for='{{star}}' wx:key='{{item.id}}'>
+            <image src="{{star1}}"></image>
+          </block>
+          <text>2分</text>
+          <progress percent="0.71" show-info activeColor='#EEB422' border-radius='50' />
+        </view>
+        <view class="star-item flex-box flex-h-ce">
+          <block wx:for='{{star}}' wx:key='{{item.id}}'>
+            <image src="{{star1}}"></image>
+          </block>
+          <text>1分</text>
+          <progress percent="1.37" show-info activeColor='#EEB422' border-radius='50' />
+        </view>
+      </view>
+    </view> -->
+    <view class="charts flex-box flex-center-center">
+      <canvas class="canvas" canvas-id="lineGraph"></canvas>
+    </view>
+    <view class="li flex-box-v">
+      <view class="title bg flex-h-ce flex-box flex-dv-center">
+        <text>本月5星好评:15次</text>
+        <view>
+          <picker mode="date" fields="month" value="{{date}}" start="1999-10-01" end="2999-10-01" bindchange="bindDateChange">
+            <view class="picker flex-box flex-h-ce">
+             <text>{{date}}</text>
+             <image src="../../../assets/images/picker.png"></image>
+            </view>
+          </picker>
+          <image class="icon" src="../../../assets/images/arrow-right.png" wx:if="{{isR}}"></image>
+          <image class="icon" src="../../../assets/images/arrow-down.png"></image>
+        </view>
+      </view>
+      <view class="details">
+        <scroll-view style="height:300px" scroll-y scroll-with-animation='true'>
+          <view class="detail-item">
+            <view class="flex-box flex-dv-center">
+              <view class="detail-time flex-box flex-h-ce">
+                <image src="../../../assets/images/clock.png"></image>
+                <text>8-20 14:02:32</text>
+              </view>
+              <text>报警人:林先生</text>
+            </view>
+            <view class="flex-box flex-h-ce detail-comment">
+              <image src="../../../assets/images/comment.png"></image>
+              <text>警官有勇有谋，身手敏捷</text>
+            </view>
+          </view>
+          <view class="detail-item">
+            <view class="flex-box flex-dv-center">
+              <view class="detail-time flex-box flex-h-ce">
+                <image src="../../../assets/images/clock.png"></image>
+                <text>8-20 14:02:32</text>
+              </view>
+              <text>报警人:林先生</text>
+            </view>
+            <view class="flex-box flex-h-ce detail-comment">
+              <image src="../../../assets/images/comment.png"></image>
+              <text>警官有勇有谋，身手敏捷</text>
+            </view>
+          </view>
+          <view class="detail-item">
+            <view class="flex-box flex-dv-center">
+              <view class="detail-time flex-box flex-h-ce">
+                <image src="../../../assets/images/clock.png"></image>
+                <text>8-20 14:02:32</text>
+              </view>
+              <text>报警人:林先生</text>
+            </view>
+            <view class="flex-box flex-h-ce detail-comment">
+              <image src="../../../assets/images/comment.png"></image>
+              <text>警官有勇有谋，身手敏捷</text>
+            </view>
+          </view>
+          <view class="detail-item">
+            <view class="flex-box flex-dv-center">
+              <view class="detail-time flex-box flex-h-ce">
+                <image src="../../../assets/images/clock.png"></image>
+                <text>8-20 14:02:32</text>
+              </view>
+              <text>报警人:林先生</text>
+            </view>
+            <view class="flex-box flex-h-ce detail-comment">
+              <image src="../../../assets/images/comment.png"></image>
+              <text>警官有勇有谋，身手敏捷</text>
+            </view>
+          </view>
+          <view class="detail-item">
+            <view class="flex-box flex-dv-center">
+              <view class="detail-time flex-box flex-h-ce">
+                <image src="../../../assets/images/clock.png"></image>
+                <text>8-20 14:02:32</text>
+              </view>
+              <text>报警人:林先生</text>
+            </view>
+            <view class="flex-box flex-h-ce detail-comment">
+              <image src="../../../assets/images/comment.png"></image>
+              <text>警官有勇有谋，身手敏捷</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

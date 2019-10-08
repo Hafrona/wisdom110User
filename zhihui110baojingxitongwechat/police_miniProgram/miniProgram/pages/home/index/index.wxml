@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 地址定位 -->
+  <view class="header">
+    <view class="personal" catchtap="showMenu">
+      <image src="../../../assets/images/personal.png"></image>
+    </view>
+    <view class="address relative">莆田市
+      <span>
+        <image src="../../../assets/images/drop down.png"></image>
+      </span>
+    </view>
+  </view>
+  <!-- 左侧个人中心菜单栏 -->
+  <view class="personalNav flex-h-ce flex-box-v {{ifShowMenu ? 'openMenu':'closeMenu'}}" hidden="{{!ifShowMenu}}">
+    <view class="top flex-box-v flex-h-ce">
+      <view class="headPortrait">
+        <image src="../../../assets/images/police.png"></image>
+      </view>
+      <view class="info">
+        <view class="p_name">
+          <text>刘警官</text>
+        </view>
+        <view class="level">
+          <text>黄金警官</text>
+        </view>
+      </view>
+    </view>
+    <view class="menu flex-box-v flex-1">
+      <li>
+        <image src="../../../assets/images/menu.png"></image>
+        <text>出警历史</text>
+      </li>
+      <li>
+        <image src="../../../assets/images/gou_selected.png"></image>
+        <text>我的评价</text>
+      </li>
+      <li>
+        <image src="../../../assets/images/card.png"></image>
+        <text>巡逻打卡</text>
+      </li>
+      <li>
+        <image src="../../../assets/images/setting.png"></image>
+        <text>设置</text>
+      </li>
+    </view>
+    <view class="bottom">
+      <text>法律条款与平台准则 ></text>
+    </view>
+  </view>
+  <view  class="mapContent">
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+  </view>
+  <view class="footer">
+    <!-- 底部提示消息 -->
+    <view class="message flex-box flex-h-ce">
+      <view class="icon">
+        <image src="../../../assets/images/laba.png"></image>
+      </view>
+      <text>您当前的位置：骠骑网络</text>
+    </view>
+    <!-- 我要出警 -->
+    <view class="bottom_btn" catchtap="onCase">
+      <view>我要出警</view>
+    </view>
+  </view>
+  <!-- 蒙层 -->
+  <view class="mask {{!isMask?'openMask':'closeMask'}}" catchtap="ifMask" hidden='{{!ifMask}}'></view>
+</view>

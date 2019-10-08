@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/testIndex/testIndex",
+    "pages/onCase/index/index",
+    "pages/my/caseHistory/caseHistory",
+    "pages/my/evaluate/evaluate",
+    "pages/onCase/onMission/onMission",
+    "pages/my/card/card"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于程序测试"
+    }
+  }
+}

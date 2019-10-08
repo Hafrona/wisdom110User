@@ -1,0 +1,78 @@
+<view class='container'>
+  <header>
+    <view class="top flex-box flex-h-ce flex-d-center">
+      <image src="../../../assets/images/x.png"></image>
+      <text>龙桥派出所</text>
+      <image src="../../../assets/images/top_menu.png"></image>
+    </view>
+  </header>
+  <view class="content">
+    <!-- 警官头像、名称 -->
+    <view class="userInfo flex-box-v flex-center-center">
+      <view class="portrait">
+        <image src="../../../assets/images/police.png"></image>
+      </view>
+      <view class="userName flex-box flex-h-ce">
+        <view class="line"></view>
+        <text>张警官</text>
+        <view class="line"></view>
+      </view>
+    </view>
+    <!-- 打卡时间 -->
+    <view class="log flex-box">
+      <!-- 时间轴 -->
+      <!-- 竖线 -->
+      <view class="verticalLine"></view>
+      <view class="cardInfo flex-box-v flex-d-center">
+        <view class="start flex-box-v">
+          <text>上班时间08:30</text>
+          <text>打卡时间08:31</text>
+          <view class="address">
+            <image src="../../../assets/images/address_blue.png"></image>
+            莆田市三信花园
+          </view>
+        </view>
+        <view class="end flex-box-v">
+          <view class="address">
+            <image src="../../../assets/images/address_blue.png"></image>
+            莆田市四合花园
+          </view>
+          <text>打卡时间18:30</text>
+          <text>下班时间18:30</text>
+        </view>
+      </view>
+    </view>
+    <!-- 打卡按钮 -->
+    <view class="carBtn flex-box-v flex-center-center">
+        <view class="btn flex-box-v flex-center-center">
+          <text>巡逻打卡</text>
+          <text class="cardTime">{{time}}</text>
+        </view>
+        <view class="currentAddress flex-box flex-h-ce">
+          <image src="../../../assets/images/address_blue.png"></image>
+          <text>莆田市三信花园</text>
+          <view class="location">重新定位</view>
+        </view>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="tabBar">
+    <view class="tab flex-box flex-dv-center">
+          <view class="tab-item flex-box-v flex-center-center" catchtap="openTab">
+              <image src="../../../assets/images/address_blue.png"></image>
+              <text>打卡</text>
+          </view>
+          <view class="tab-item flex-box-v flex-center-center">
+              <image src="../../../assets/images/assume.png"></image>
+              <text>统计</text>
+          </view>
+          <view class="tab-item flex-box-v flex-center-center">
+              <image src="../../../assets/images/setting.png"></image>
+              <text>设置</text>
+          </view>
+          <view class="dot">
+            <image src="../../../assets/images/bot.png"></image>
+          </view>
+      </view>
+  </view>
+</view>

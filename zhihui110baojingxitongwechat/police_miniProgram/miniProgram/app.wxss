@@ -1,0 +1,222 @@
+/**app.wxss**/
+/* 布局 */
+/*设置为flex弹性布局，此处做好了各个浏览器内核的兼容设置  */
+.flex-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/*盒子模型，竖向自适应,垂直排列  */
+.flex-box-v {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex ;
+  -webkit-box-orient: vertical;
+  -webkit-flex-flow: column;
+  flex-flow: column !important;
+}
+/* 水平等列排版（容器左右没缝隙，子元素左右两边自适应） */
+.flex-d-center{
+  justify-content:space-between;
+  -webkit-justify-content: space-between;
+}
+
+/* 水平等列排版（子元素两边有缝隙自己适应） */
+.flex-dv-center{
+  justify-content:space-around;
+  -webkit-justify-content: space-around;
+}
+
+
+/*通过一起使用 box-align 和 box-pack 属性，对 view 框的子元素进行居中，目前没有浏览器支持box-align 和 box-pack 属性，所以需要加上浏览器内核-webkit，-moz等的简写  */
+.flex-center-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+}
+
+/*对view中的子元素进行居中，并且位于容器的中间位置（flex-box水平;flex-box-v垂直）  */
+.flex-v-zhu, .flex-h-zhu {
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+}
+
+/*对view中的子元素进行居中，并且位于容器的中间位置（flex-box垂直;flex-box-v水平）  */
+.flex-v-ce, .flex-h-ce {
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+}
+
+/*让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容：  */
+.flex-1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.flex-2 {
+  -webkit-box-flex: 2;
+  box-flex: 2;
+  -moz-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.flex-3 {
+  -webkit-box-flex: 3;
+  box-flex: 3;
+  -moz-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+}
+
+/*超出部分用....表示的公用样式  */
+
+.font-flex-word {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 内容超出部分自动换行 */
+.flex-d-wrap{
+  flex-wrap: wrap;
+}
+
+/* 内容超出部分不换行 */
+.flex-no-wrap{
+  flex-wrap: nowrap;
+}
+
+
+/* 相对定位 */
+.relative{
+  position: relative;
+}
+
+/* 去掉button的边框 */
+button::after{ border: none; }
+.btn{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+/* 浅颜色字体 */
+.text-color{
+  color: #BBBBBB;
+}
+/* 下边距 */
+.border{
+  border-bottom: 1px solid #f1f1f1;
+}
+/* 超出显示省略号 */
+.overflow{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 去除 scroll-view标签的滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.clear::after{
+  content:'';
+  clear: both;
+}
+/* 蒙层 */
+.mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 菜单栏出现动画 */
+.openMenu{
+  animation: opentranslate 0.3s ease-in-out
+}
+.closeMenu{
+  animation: closetranslate 0.3s ease-in-out
+}
+.openMask{
+  animation: showMask 0.3s ease-in-out
+}
+.closeMask{
+  animation: hideMask 0.3s ease-in-out
+}
+.pullUp{
+  animation: pullUp 0.3s
+}
+.pullDown{
+  animation: pullDown 0.2s;
+}
+.openscal{
+  animation: openscal 0.5s
+}
+.hidescal{
+  animation: hidescal 0.5s
+}
+@keyframes opentranslate
+{
+  from {transform: translateX(-195rpx);opacity: 0}
+  to {transform: translateX(0rpx);opacity: 1}
+}
+@keyframes closetranslate
+{
+  from {transform: translateX(0rpx);opacity: 1}
+  to {transform: translateX(-195rpx);opacity: 0}
+}
+@keyframes hideMask
+{
+  from{opacity: 1}
+  to{opacity: 0}
+}
+@keyframes showMask
+{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+/* 上拉 */
+@keyframes pullUp
+{
+  from{transform: translateY(-5rpx);opacity: 0.8}
+  to{transform: translateY(0);opacity: 1}
+}
+/* 下拉 */
+@keyframes pullDown
+{
+  from{transform: translateY(-10rpx);opacity: 1}
+  to{transform: translateY(0);opacity: 1}
+}
+@keyframes openscal{
+  from{transform: scale(0);opacity: 0}
+  to{transform: scale(1);opacity: 1}
+}
+@keyframes hidescal{
+  from{transform: scale(1);opacity: 0}
+  to{transform: scale(0);opacity: 1}
+}

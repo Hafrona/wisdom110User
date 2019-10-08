@@ -1,0 +1,57 @@
+header .top{
+  height: 100rpx;
+  width: 100%;
+  background: #0082d6;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+header .top text{
+  color: #ffffff;
+}
+header .top image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* content */
+.content{
+  padding: 20rpx 10rpx;
+}
+.content .log{
+  border: 1px solid #f1f1f1;
+  box-shadow: 4rpx 4rpx 4rpx #e2e2e2;
+  border-radius: 10rpx;
+}
+.content .log .li{
+  font-size: 30rpx;
+}
+.content .log .li:not(:last-child) .blank{
+  padding: 15rpx 30rpx;
+  border-bottom: 1px solid #d0d7e4;
+}
+.content .log .li .padding{
+  padding: 15rpx 30rpx;
+  border-bottom: 1px solid #d0d7e4;
+}
+.log .li .title image,.log .li .date image,.log .li .address image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.content .log .li .date,.content .log .li .address{
+  background: #eceff4;
+}
+.content .log .li .date text, .content .log .li .address text{
+  margin-left: 20rpx;
+  color: #7e7e7e;
+  font-size: 28rpx;
+}
+.content .log .li .blank{
+  min-height: 60rpx;
+  box-sizing: border-box;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}

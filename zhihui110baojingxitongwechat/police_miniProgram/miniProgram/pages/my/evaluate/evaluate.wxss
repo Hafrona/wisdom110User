@@ -1,0 +1,102 @@
+page{
+  background: #eceff4;
+}
+header .top{
+  height: 100rpx;
+  width: 100%;
+  background: #0082d6;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+header .top text{
+  color: #ffffff;
+}
+header .top image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.charts {
+  padding: 20rpx 0;
+  background: #ffffff;
+}
+.content{
+  padding: 10rpx 8rpx;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 0 10rpx #f1f1f1;
+  box-sizing: border-box;
+}
+.li .title{
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  text-align: center;
+  padding: 8rpx 0;
+  background: #ffffff;
+}
+.li .title .icon{
+  position: absolute;
+  top: 15rpx;
+  right: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.li .star{
+  width: 100%;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.overallRating{
+  padding: 12rpx 0;
+}
+.overallRating image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.overallRating text{
+  font-size: 30rpx;
+}
+.bg{
+  background: #eceff4!important;
+}
+.rating{
+  margin: 0 10rpx;
+}
+.rating text{
+  color: #EEB422;
+}
+.star-item image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.star-item progress{
+  min-width: 300rpx;
+  color: #5f5f5f;
+}
+.star-item text{
+  font-size: 28rpx;
+  color: #5f5f5f;
+  margin: 0 10rpx;
+}
+.picker image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx;
+} 
+.detail-item{
+  font-size: 28rpx;
+  color: #535b72;
+  padding: 28rpx 0;
+}
+.detail-item:nth-child(odd){
+  background: #ffffff;
+}
+.detail-item image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx;
+}
+.detail-item .detail-comment{
+  padding: 10rpx 80rpx;
+}

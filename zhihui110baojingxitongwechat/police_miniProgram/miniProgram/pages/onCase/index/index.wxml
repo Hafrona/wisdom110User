@@ -1,0 +1,103 @@
+<view class='container'>
+  <header>
+    <view class="top flex-box flex-h-ce flex-d-center">
+        <image src="../../../assets/images/x.png"></image>
+        <image src="../../../assets/images/top_menu.png"></image>
+    </view>
+  </header>
+  <view class="main">
+      <!-- 警察信息 -->
+      <view class="personInfo flex-box-v flex-h-ce">
+          <view class="personAvatar">
+            <image src="../../../assets/images/police.png"></image>
+          </view>
+          <view class="personName"><text>刘警官</text></view>
+          <!-- 星星分数显示 -->
+          <view class="personScore flex-box flex-h-ce">
+            <block wx:for="{{selected}}">
+             <image class="star-images" src="{{normal_star}}"></image>
+            </block>
+            <block wx:for="{{rest}}">
+              <image class="star-images" src="{{empty_star}}"></image>
+            </block>
+          </view>
+          <!-- 评价 -->
+          <view class="evaluate flex-box flex-h-ce flex-dv-center">
+            <view class="flex-box-v flex-v-ce">
+              <text>出警数</text>
+              <span>57</span>
+            </view>
+            <view class="flex-box-v flex-v-ce">
+              <text>平均出警速度</text>
+              <span>2分钟</span>
+            </view>
+            <view class="flex-box-v flex-v-ce">
+              <text>破案率</text>
+              <span>95%</span>
+            </view>
+          </view> 
+      </view>
+      <!-- 案情列表 -->
+      <view class="case">
+        <scroll-view style="height:320px" scroll-y lower-threshold='50' scroll-with-animation='true'>
+            <view class="li flex-box flex-h-ce">
+                <image src="../../../assets/images/police.png"></image>
+                <view class="flex-1 flex-box-v">
+                    <text class="caseTime">今天 12:00</text>
+                    <text class="caseAddress">京鼎广场126号</text>
+                    <text class="caseType">抢劫案件</text>
+                </view>
+                <view class="status">等待出警</view>
+            </view>
+            <view class="li flex-box flex-h-ce">
+                <image src="../../../assets/images/police.png"></image>
+                <view class="flex-1 flex-box-v">
+                    <text class="caseTime">今天 12:00</text>
+                    <text class="caseAddress">京鼎广场126号</text>
+                    <text class="caseType">抢劫案件</text>
+                </view>
+                <view class="status">等待出警</view>
+            </view>
+            <view class="li flex-box flex-h-ce">
+                <image src="../../../assets/images/police.png"></image>
+                <view class="flex-1 flex-box-v">
+                    <text class="caseTime">今天 12:00</text>
+                    <text class="caseAddress">京鼎广场126号</text>
+                    <text class="caseType">抢劫案件</text>
+                </view>
+                <view class="status flex-box-v">
+                  <text>正在出警</text>
+                  <text>需要增援</text>
+                </view>
+            </view>
+            <view class="li flex-box flex-h-ce">
+                <image src="../../../assets/images/police.png"></image>
+                <view class="flex-1 flex-box-v">
+                    <text class="caseTime">今天 12:00</text>
+                    <text class="caseAddress">京鼎广场126号</text>
+                    <text class="caseType">抢劫案件</text>
+                </view>
+                <view class="status">等待出警</view>
+            </view>
+            <view class="li flex-box flex-h-ce">
+                <image src="../../../assets/images/police.png"></image>
+                <view class="flex-1 flex-box-v">
+                    <text class="caseTime">今天 12:00</text>
+                    <text class="caseAddress">京鼎广场126号</text>
+                    <text class="caseType">抢劫案件</text>
+                </view>
+                <view class="status">等待出警</view>
+            </view>
+            <view class="li flex-box flex-h-ce">
+                <image src="../../../assets/images/police.png"></image>
+                <view class="flex-1 flex-box-v">
+                    <text class="caseTime">今天 12:00</text>
+                    <text class="caseAddress">京鼎广场126号</text>
+                    <text class="caseType">抢劫案件</text>
+                </view>
+                <view class="status">等待出警</view>
+            </view>
+        </scroll-view>
+      </view>
+  </view>
+</view>
