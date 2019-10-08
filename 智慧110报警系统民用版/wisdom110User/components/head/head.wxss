@@ -1,0 +1,42 @@
+@import "/app.wxss";
+.head {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  background-color: #0082d6;
+  color: #fff;
+}
+
+.head-close {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.head-close text{
+  font-size: 50rpx;
+}
+
+.head >text {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.head-option {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: 30rpx;
+  align-items: center;
+}
+.head-option text{
+  font-size: 50rpx;
+}

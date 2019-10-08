@@ -1,0 +1,9 @@
+<view class='head'>
+  <view class='head-close' >
+    <text class='iconfont icon-guanbi'></text>
+  </view>
+  <text>{{headTitle}}</text>
+  <view class='head-option '>
+    <text class='iconfont icon-zhankai1'></text>
+  </view>
+</view>

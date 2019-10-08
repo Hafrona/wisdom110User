@@ -1,0 +1,66 @@
+/* components/user/user.wxss */
+@import "/app.wxss";
+.user {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 20;
+}
+
+.user-mask {
+  width: 45%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.user-nav {
+  width: 55%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.user-name {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-name image {
+  height: 100rpx;
+  width: 100rpx;
+  background-color: #666;
+  margin-bottom: 10rpx;
+}
+.operation{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.nav-operation {
+  width: 100%;
+  height:60%;
+  display: flex;
+  align-items: center;
+  padding-left: 50rpx;
+}
+
+.nav-operation:hover {
+  color: #0083d3;
+}
+
+.nav-operation text:nth-child(1) {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+}
+
+.nav-operation text {
+  font-size: 28rpx;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}

@@ -1,0 +1,51 @@
+<view class='identity'>
+  <Head headTitle="{{headTitle}}" />
+  <view class='identity-content'>
+    <view class='personal-photo'>
+      <text>1.请上传个人照片，将作为个人信息提示</text>
+      <view class='upPhoto'>
+        <view class='click-upPhoto' bindtap='upUserImage'>
+          <view class='upPhoto-icon'>
+            <text class='iconfont icon-tianjia'></text>
+            <text class='iconfont icon-tupian'></text>
+            <text>上传个人照片</text>
+          </view>
+        </view>
+        <view class='preview-photo'>
+          <image src='{{userImages}}' mode='scaleToFill'></image>
+        </view>
+      </view>
+    </view>
+    <view class='identity-card'>
+      <text>2.请上传个人身份证，保证文字内容清晰</text>
+      <view class='upPhoto'>
+        <view class='click-upPhoto' bindtap='upIdentityNumber'>
+          <view class='upPhoto-icon'>
+            <text class='iconfont icon-tianjia'></text>
+            <text class='iconfont icon-tupian'></text>
+            <text>上传个人照片</text>
+          </view>
+        </view>
+        <view class='preview-photo'>
+          <image src='{{IdentityImage}}' mode='scaleToFill'></image>
+        </view>
+      </view>
+    </view>
+    <view class='user-message'>
+      <text>3.请确认以下信息是否正确，正确请点击确认</text>
+      <view class='identity-user-name'>
+        <input placeholder='真实姓名：'></input>
+        <view class='user-name-checkbox'>
+          <checkbox></checkbox>
+        </view>
+      </view>
+      <view class='identity-number'>
+        <input placeholder='身份证号：'></input>
+        <view class='identity-number-checkbox'>
+          <checkbox></checkbox>
+        </view>
+      </view>
+    </view>
+  </view>
+  <Footer affirm="{{footerText}}" />
+</view>

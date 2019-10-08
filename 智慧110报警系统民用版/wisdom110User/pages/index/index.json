@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "User":"/components/user/user"
+  }
+}

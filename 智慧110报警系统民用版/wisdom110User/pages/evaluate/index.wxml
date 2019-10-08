@@ -1,0 +1,56 @@
+<view class='evaluate'>
+  <!-- 头部 -->
+  <Head headTitle="{{headTitle}}" />
+  <!-- 评价 -->
+  <view class='content'>
+    <!-- 警察信息，联系部分 -->
+    <view class='content-message'>
+      <view class='content-head-portrait'>
+        <image></image>
+      </view>
+      <view class='content-user'>
+        <!-- 名字 星级 接单数量 -->
+        <view class='user'>
+          <view class='user-name'>
+            <text>刘警官</text>
+            <text>5.0</text>
+            <text>15单</text>
+          </view>
+          <view class='user-serialNum'>
+            闽-B0007警
+          </view>
+        </view>
+      </view>
+      <view class='content-user-call'>
+        <view class='user-message'>
+          <text class='iconfont icon-xinxi'></text>
+        </view>
+        <view class='user-call'>
+          <text class='iconfont icon-dianhua'></text>
+        </view>
+      </view>
+    </view>
+    <!-- 输入评价部分 -->
+    <view class='content-text'>
+      <textarea placeholder='请输入您对警官的评价...'>
+      </textarea>
+    </view>
+    <!-- 五星好评部分 -->
+    <view class='content-grade'>
+      <swiper indicator-dots="true">
+        <swiper-item>
+        </swiper-item>
+        <swiper-item class="grade">
+          <view class='grade-star'>星星</view>
+          <view class='grade-label'>
+            <view class='label' wx:for="{{labelNav}}" wx:key="index" bindtap='labelNavClick' data-index="{{item.id}}">
+              <text class='{{item.labelActive?"labelActive":""}}'>{{item.text}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <Footer class="footer" affirm="{{footerText}}" bindtap="upEvaluateData"/>
+</view>

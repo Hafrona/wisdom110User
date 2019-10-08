@@ -1,0 +1,13 @@
+/* components/footer/footer.wxss */
+.footer{
+  height:7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0082d6;
+}
+.footer-uploading{
+  color: #fff;
+  font-weight: 600;
+  font-size: 32rpx;
+}

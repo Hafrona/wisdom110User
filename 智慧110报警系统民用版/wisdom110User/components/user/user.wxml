@@ -1,0 +1,16 @@
+<view class='user' animation="{{userAnimation}}">
+  <view class='user-nav'>
+    <view class='user-name'>
+      <image></image>
+      <text>刘某</text>
+    </view>
+    <view class='operation' wx:for='{{userNav}}' wx:key='index'>
+      <view class='nav-operation'>
+        <text class='iconfont {{item.icon}}'></text>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='user-mask' bindtap='maskEnter'>
+  </view>
+</view>

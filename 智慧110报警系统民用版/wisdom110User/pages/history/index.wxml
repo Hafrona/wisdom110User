@@ -1,0 +1,20 @@
+<view class='history'>
+  <Head headTitle="{{headTitle}}" />
+  <!-- 事件 -->
+  <view class='incident'>
+    <view class='history-incident' wx:for="{{incidentList}}" wx:key="index">
+      <view class='incident-origin'>
+        {{item.name}}
+        <text bindtap='unfold' data-unfoldindex='{{index}}' class='iconfont icon-huabanfuben' 
+        animation="{{unfoldAnimation}}"
+        >
+        </text>
+      </view>
+      <view class='incident-message'>
+        <view class='message-time'>{{item.time}}</view>
+        <view class='message-site'>{{item.site}}</view>
+      </view>
+      <view class='incident-bottom'></view>
+    </view>
+  </view>
+</view>

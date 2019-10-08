@@ -1,0 +1,140 @@
+/* pages/evaluate/index.wxss */
+@import "/app.wxss";
+.evaluate {
+  height: 100vh;
+  padding: 6rpx 6rpx;
+  box-sizing: border-box;
+  position:relative;
+}
+
+.content {
+  height: 60%;
+}
+
+.content-message {
+  height: 20%;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.content-head-portrait {
+  flex: 2;
+}
+
+.content-head-portrait image {
+  width: 100%;
+  height: 100%;
+}
+
+.content-user {
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  width: 100%;
+  font-size: 30rpx;
+}
+
+.user .user-name >text:nth-child(2) {
+  border-left: 4rpx solid #999;
+  font-size: 20rpx;
+  color: #666;
+  padding: 0 20rpx;
+  margin-left: 10rpx;
+}
+
+.content-user-call {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-message,.user-call{
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  border:4rpx solid #ededed;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.user-message{
+  margin-right: 16rpx;
+}
+.user-message text,.user-call text{
+  font-size: 40rpx;
+}
+.content-text {
+  height: 30%;
+  padding: 20rpx 40rpx;
+  background-color: #fff;
+  margin: 6rpx 0;
+}
+
+.content-text >textarea {
+  height: 100%;
+  width: 100%;
+}
+
+.content-grade {
+  height: 50%;
+  background-color: #fff;
+}
+
+.content-grade swiper {
+  height: 100%;
+}
+.grade-star {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grade-label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label {
+  width: 50%;
+  margin-bottom: 25rpx;
+  box-sizing: border-box;
+}
+
+.label:nth-child(odd) {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15rpx;
+}
+
+.label:nth-child(even) {
+  padding-left: 15rpx;
+}
+
+.label text {
+  width: 70%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  border: 2rpx solid #ededed;
+  border-radius: 25rpx;
+  align-items: center;
+  font-size: 32rpx;
+  color: #999;
+  font-weight: 600;
+  background-color: #ededed;
+}
+.labelActive{
+  color: #fff !important;
+  background-color: #0082d6 !important;
+}
+.footer{
+  width: 100%;
+  position: absolute;
+  bottom:0;
+  left: 0;
+}

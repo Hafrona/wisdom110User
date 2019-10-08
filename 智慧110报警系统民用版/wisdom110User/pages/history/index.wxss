@@ -1,0 +1,46 @@
+@import "/app.wxss";
+.history{
+  height: 100vh;
+}
+.incident{
+  padding:10rpx 10rpx;
+  box-sizing: border-box;
+}
+.history-incident{ 
+}
+.incident-origin{
+  background-color: #fff;
+  height: 60rpx;
+  color:#495259;
+  border-bottom: 2rpx solid #999;
+  border-top: 2rpx solid #999;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left:20rpx;
+  font-size: 36rpx;
+}
+.incident-origin >text{
+  position: absolute;
+  top:15rpx;
+  right:20rpx;
+}
+.incident-message {
+}
+.message-time,.message-site{
+  height: 60rpx;
+  border-bottom: 2rpx solid #999;
+  font-size: 28rpx;
+  color: #8395ad;
+  display: flex;
+  align-items: center;
+  padding-left:20rpx;
+  box-sizing: border-box;
+}
+.incident-bottom{
+  height: 60rpx;
+   background-color: #fff;
+}
+.incident-origin>text{
+  transform: rotate(180deg)
+}

@@ -1,0 +1,45 @@
+<view class='classify'>
+  <view class='case-type' wx:for="{{classifyNav}}" wx:key='index' bindtap='openParticulars'>
+    <icon></icon>
+    <text>{{item.name}}</text>
+    <text class='iconfont icon-jiantou'></text>
+  </view>
+  <!-- 案件详情 -->
+  <view class='particulars-mask' catchtap='maskShow' hidden="{{classifyParticulars}}">
+    <view class='particulars' catchtap='stopMask'>
+      <view class='particulars-title'>详情</view>
+      <form>
+        <view class='particulars-content'>
+          <view class='particulars-form'>
+            <view class='form-call'>
+              <text>手机号</text>
+              <input value='13905941234'></input>
+            </view>
+            <view class='form-call'>
+              <text>地址详情</text>
+              <input value="国际大厦2号楼1501"></input>
+            </view>
+            <view class='form-call'>
+              <text>涉案人数</text>
+              <input value='3人'></input>
+            </view>
+            <view class='form-call'>
+              <text>是否持有凶器</text>
+              <input value='是'></input>
+            </view>
+            <view class='locale'>
+              <text>现场图片</text>
+              <text class='iconfont icon-tianjia'></text>
+              <text class='iconfont icon-tupian'></text>
+              <text class='iconfont icon-lajitong'></text>
+            </view>
+          </view>
+          <button class='particulars-formBtn' formType="submit">确定
+            <text class=' iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-'>
+          </text>
+          </button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>
