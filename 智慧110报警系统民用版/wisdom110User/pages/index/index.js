@@ -18,47 +18,47 @@ Page({
     userPlace: '',
     userAnimation: {},
     userNav: [{
-        name: '搜索历史',
-        id: 1,
-        icon: '.icon-zhankai',
-        url:""
-      },
-      {
-        name: '实名认证',
-        id: 2,
-        icon: '.icon-anquan',
-        url:"/pages/identity/index"
-      },
-      {
-        name: '常用地址',
-        id: 3,
-        icon: '.icon-dizhi1',
-        url:''
-      },
-      {
-        name: '设置',
-        id: 4,
-        icon: '.icon-shezhi',
-        url:""
-      }
+      name: '搜索历史',
+      id: 1,
+      icon: '.icon-zhankai',
+      url: ""
+    },
+    {
+      name: '实名认证',
+      id: 2,
+      icon: '.icon-anquan',
+      url: "/pages/identity/index"
+    },
+    {
+      name: '常用地址',
+      id: 3,
+      icon: '.icon-dizhi1',
+      url: ''
+    },
+    {
+      name: '设置',
+      id: 4,
+      icon: '.icon-shezhi',
+      url: ""
+    }
     ]
   },
-  makertap: function(e) {
+  makertap: function (e) {
     var that = this;
     var id = e.markerId;
     that.showSearchInfo(wxMarkerData, id);
     that.changeMarkerColor(wxMarkerData, id);
   },
-  onLoad: function() {
+  onLoad: function () {
     const that = this;
     // 新建百度地图对象 
     let BMap = new bmap.BMapWX({
       ak: 'AiVhdpRO5R8bGu9fpRXDmAlG5RIhIGM1'
     });
-    let fail = function(data) {
+    let fail = function (data) {
       console.log(data)
     };
-    let success = function(data) {
+    let success = function (data) {
       wxMarkerData = data.wxMarkerData;
       that.setData({
         markers: wxMarkerData,
@@ -75,7 +75,7 @@ Page({
     });
 
   },
-  showSearchInfo: function(data, i) {
+  showSearchInfo: function (data, i) {
     var that = this;
     console.log(data)
     that.setData({
@@ -86,7 +86,7 @@ Page({
     });
   },
   // 地图标记
-  changeMarkerColor: function(data, i) {
+  changeMarkerColor: function (data, i) {
     var that = this;
     data.map(v => {
       v.id === i ? v.iconPath = "/static/images/marker_yellow.png" : v.iconPath = "/static/images/marker_red.png";
@@ -97,14 +97,6 @@ Page({
   },
   // 点击左上角我的，进入我的页面
   user() {
-    // let animation = wx.createAnimation({
-    //   duration:500,
-    //   timingFunction:"ease"
-    // })
-    // animation.width(100 + "vw").height(100 + "vh").step();
-    // this.setData({
-    //   userAnimation:animation.export()
-    // })
     let {
       userShow
     } = this.data
@@ -112,6 +104,7 @@ Page({
       userShow: !userShow
     })
   },
+  // 点击遮罩层关闭侧边菜单
   maskEnter() {
     let {
       userShow
@@ -120,12 +113,12 @@ Page({
       userShow: !userShow
     })
   },
-  callThePolice(){
+  callThePolice() {
     wx.navigateTo({
       url: '/pages/classify/index'
     })
   },
-  NavIndex(index){
+  NavIndex(index) {
     var { index } = index.currentTarget.dataset
     let { userNav } = this.data
     wx.navigateTo({

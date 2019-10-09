@@ -3,18 +3,18 @@
   <!-- 事件 -->
   <view class='incident'>
     <view class='history-incident' wx:for="{{incidentList}}" wx:key="index">
-      <view class='incident-origin'>
+      <view class='incident-origin' bindtap='unfold' data-index='{{index}}'>
         {{item.name}}
-        <text bindtap='unfold' data-unfoldindex='{{index}}' class='iconfont icon-huabanfuben' 
+        <text class='iconfont icon-huabanfuben' 
         animation="{{unfoldAnimation}}"
         >
         </text>
       </view>
-      <view class='incident-message'>
+      <view class='incident-message'  hidden='{{item.unfoldIndex}}'>
         <view class='message-time'>{{item.time}}</view>
         <view class='message-site'>{{item.site}}</view>
+        <view class='incident-bottom'></view>
       </view>
-      <view class='incident-bottom'></view>
     </view>
   </view>
 </view>

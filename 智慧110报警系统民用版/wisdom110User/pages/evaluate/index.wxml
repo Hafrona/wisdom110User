@@ -5,9 +5,13 @@
   <view class='content'>
     <!-- 警察信息，联系部分 -->
     <view class='content-message'>
+      <!-- 头像 -->
       <view class='content-head-portrait'>
-        <image></image>
+        <view class='portrait'>
+          <image src='/static/images/t01d2efb525aecace3c.jpg'></image>
+        </view>
       </view>
+      <!-- 信息 -->
       <view class='content-user'>
         <!-- 名字 星级 接单数量 -->
         <view class='user'>
@@ -21,6 +25,7 @@
           </view>
         </view>
       </view>
+      <!-- 联系方式 -->
       <view class='content-user-call'>
         <view class='user-message'>
           <text class='iconfont icon-xinxi'></text>

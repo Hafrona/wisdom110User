@@ -1,4 +1,5 @@
 /* pages/evaluate/index.wxss */
+@import "/static/style/stylesheet.wxss";
 @import "/app.wxss";
 .evaluate {
   height: 100vh;
@@ -20,11 +21,37 @@
 
 .content-head-portrait {
   flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25rpx;
 }
-
-.content-head-portrait image {
-  width: 100%;
-  height: 100%;
+.content-head-portrait .portrait{
+  width: 110rpx;
+  height:110rpx;
+  border-radius: 50%;
+  background-color: #328dc6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.content-head-portrait .portrait::after{
+  content: "";
+  width: 20rpx;
+  height:40rpx;
+  background-color: #328dc6;
+  border-radius: 0 20rpx 20rpx 0;
+  position: absolute;
+  top:35rpx;
+  right:-15rpx;
+}
+.content-head-portrait .portrait image {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border:2rpx solid #fff;
 }
 
 .content-user {

@@ -12,8 +12,8 @@
   background-color: #fff;
   height: 60rpx;
   color:#495259;
-  border-bottom: 2rpx solid #999;
-  border-top: 2rpx solid #999;
+  border-bottom: 2rpx solid #c9d5e1;
+  border-top: 2rpx solid #c9d5e1;
   position: relative;
   display: flex;
   align-items: center;
@@ -26,10 +26,15 @@
   right:20rpx;
 }
 .incident-message {
+  animation: unfoldAnimation .5s;
+}
+@keyframes unfoldAnimation{
+  from{opacity: 0}
+  to{opacity: 1}
 }
 .message-time,.message-site{
   height: 60rpx;
-  border-bottom: 2rpx solid #999;
+  border-bottom: 2rpx solid #c9d5e1;
   font-size: 28rpx;
   color: #8395ad;
   display: flex;
@@ -40,7 +45,8 @@
 .incident-bottom{
   height: 60rpx;
    background-color: #fff;
+   border-radius: 0 0 20rpx 20rpx;
 }
 .incident-origin>text{
-  transform: rotate(180deg)
+
 }

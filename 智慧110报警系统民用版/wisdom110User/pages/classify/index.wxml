@@ -34,7 +34,7 @@
               <text class='iconfont icon-lajitong'></text>
             </view>
           </view>
-          <button class='particulars-formBtn' formType="submit">确定
+          <button class='particulars-formBtn' formType="submit"  bindtap='confirm'>确定
             <text class=' iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-'>
           </text>
           </button>

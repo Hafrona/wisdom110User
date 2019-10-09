@@ -17,13 +17,12 @@
   padding-left: 50rpx;
   box-sizing: border-box;
 }
-
-.heard-user image {
-  width: 60rpx;
-  height: 100%;
+.heard-user >text {
+  font-size: 48rpx;
+  opacity: .5;
 }
 
-.heard text {
+.heard >text {
   width: 57%;
   padding-left: 14rpx;
   font-size: 30rpx;
@@ -42,7 +41,7 @@
   width: 100%;
 }
 
-.callPolice {
+.call-police {
   width: 100%;
   display: flex;
   background-color: rgba(222, 227, 235, 0.9);
@@ -82,20 +81,62 @@
   color: #999;
 }
 
-.callPoliceButton {
+.call-police-button {
   height: 160rpx;
   width: 160rpx;
   margin: 0 20rpx;
-  background-color: #ededed;
+  border-radius: 50%;
+  opacity: .8;
+  background-color: #fff;
   position: absolute;
   bottom: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.call-police-button .call-border{
+  height: 100rpx;
+  width: 100rpx;
+  border:10rpx solid #e1e1e1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:10rpx;
+  /* background: linear-gradient(#f79309, #ed4806, #df0010); */
+  background: radial-gradient(#f79309, #ed4806, red);
+}
+.call-police-button .call-border >view{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16rpx;
+  color: red;
+}
+.call-police-button .call-border >view text{
+    font-size: 50rpx;
+}
 .footer {
   height: 8vh;
-  background-color: #d7dee7;
+  background: linear-gradient(#cbd3e0,#dde1ea,#fff);
   display: flex;
+  position: relative;
+  border-top: 2rpx solid #ededed;
+}
+.footer::after{
+  content: " ";
+  width: 100%;
+  height: 2rpx;
+  background-color: #fff;
+  position:absolute;
+  top:0rpx;
+  left: 0;
 }
 
 .footer-status {
@@ -130,12 +171,12 @@
   top: 0rpx;
   left: 0rpx;
   z-index: 20;
-  /* animation: donghua 3s; */
+  animation: userAnimation .3s;
 }
-/* @keyframes donghua {
-  0%{width: 100vw;}
-  100%{width: 100vh;}
-} */
+@keyframes userAnimation {
+  0%{width: 0vw;opacity: 0}
+  100%{width: 100vw;opacity: 1}
+}
 
 .user-mask {
   width: 45%;
@@ -156,14 +197,6 @@
   justify-content: center;
   align-items: center;
 }
-
-.user-name image {
-  height: 100rpx;
-  width: 100rpx;
-  background-color: #666;
-  margin-bottom: 10rpx;
-}
-
 .operation {
   height: 100rpx;
   display: flex;
@@ -192,4 +225,23 @@
   display: flex;
   height: 100%;
   align-items: center;
+}
+.user-name .user-headPortrait {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  border:4rpx solid #ededed; 
+  box-shadow: 0rpx 5rpx 20rpx #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:10rpx;
+}
+
+.user-name .user-headPortrait image {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  border:4rpx solid #ededed;
 }

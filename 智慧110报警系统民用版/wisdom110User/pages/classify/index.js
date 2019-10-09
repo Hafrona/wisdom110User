@@ -26,5 +26,6 @@ Page({
     })
   },
   stopMask(){
-  }
+  },
+  confirm(){}
 })
