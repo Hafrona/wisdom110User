@@ -14,6 +14,7 @@ header .top image{
   height: 50rpx;
 }
 .userInfo{
+  position: relative;
   padding: 30rpx 0;
 }
 .portrait{
@@ -28,6 +29,7 @@ header .top image{
 }
 .content{
   padding: 0 12rpx;
+  min-height: 1200rpx;
 }
 .portrait image{
   width: 100%;
@@ -46,58 +48,64 @@ header .top image{
   background: #f1f1f1;
   width: 100%;
 }
-
-.log{
-  padding: 0 30rpx;
-}
 /* 时间轴 */
-
-.verticalLine::after{
-  content:'';
-  position: absolute;
-  display: block;
-  width: 15rpx;
-  height: 15rpx;
+ .time-list{
+   padding: 0 40rpx;
+ }
+ .list-cell-line{
+  height: 200rpx;
+  border-left: 1px solid #888888;
+ }
+.list-cell-circle{
+  width: 10rpx;
+  height: 10rpx;
+  background: #757575;
+  border-radius: 50%;
+  margin-left: -4rpx;
+}
+.list-cell-blue-circle{
+  width: 10rpx;
+  height: 10rpx;
   background: #0082d6;
   border-radius: 50%;
-  bottom: 0;
-  left: -2px;
+  margin-left: -3rpx;
 }
-.verticalLine::before{
-  content:'';
-  position: absolute;
-  width: 15rpx;
-  height: 15rpx;
-  background: #acacac;
-  border-radius: 50%;
-  top: 0;
-  left: -2px;
-
-}
-.verticalLine{
+.list-cell-box{
   position: relative;
-  width: 2px;
-  min-height: 350rpx;
-  background: #acacac;
+  height: 100%;
+  padding: 0 20rpx;
 }
-.verticalLine .start{
-  width: 100%;
-}
-.cardInfo{
-  margin-left: 20rpx;
-}
-.cardInfo .start text,.address,.cardInfo .end text{
+.startTime{
+  position: absolute;
+  top: -20rpx;
   font-size: 28rpx;
-  color: #8b8b8b;
-  vertical-align: middle;
+  color: #b3b3b3;
 }
-.cardInfo .start text:nth-child(2),.cardInfo .end text:nth-child(2){
+.endTime{
+  position: absolute;
+  bottom: -20rpx;
+  font-size: 28rpx;
+  color: #b3b3b3;
+}
+.clockIn,.clockOut{
+  font-size: 26rpx;
+  color: #757575;
+  margin-left: 10rpx;
+  margin-top: -10rpx;
+}
+.clockStartTime,.clockEndTime{
+  padding: 30rpx 0;
+}
+.clockStartTime text,.clockEndTime text{
   font-weight: bold;
-  font-size: 35rpx;
-  color: #000000;
-  margin: 15rpx 0;
+  font-size: 32rpx;
 }
-.cardInfo .address image,.currentAddress image{
+.cardAddress text{
+  font-size: 28rpx;
+  color: #b3b3b3;
+  margin-left: 5rpx;
+}
+ .cardInfo .address image,.currentAddress image,.cardAddress image{
   width: 30rpx;
   height: 30rpx;
 }
@@ -107,10 +115,10 @@ header .top image{
 .carBtn .btn{
   width: 200rpx;
   height: 200rpx;
-  background: #0082d6;
+  background: radial-gradient(circle at 100px 100px, #5cabff, #0082d6);
   border-radius: 50%;
   text-align: center;
-  box-shadow: 0 0 5rpx #73bef0 inset;
+  box-shadow: 0 4rpx 8rpx #8dcdf8;
   line-height: 1.4;
 }
 .carBtn .btn text{
@@ -133,6 +141,19 @@ header .top image{
   color: #0082d6;
 }
 
+/* 时间选择器 */
+.datePicker{
+  position: absolute;
+  top:80rpx;
+  right: 40rpx;
+  font-size: 28rpx;
+  color: #888888;
+}
+.picker image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 5rpx;
+}
 /* 底部导航 */
 .tabBar{
   position: fixed;

@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    time : ''
+    time : '',//当前的时间
+    currentLocation:'',//当前定位位置
+    date :'2019.10.10', //当前显示的日期
   },
   // 获取当前时间
   getCurrentTime(){
@@ -24,10 +26,35 @@ Page({
   },
   // 获取当前的位置
   getLocation(){
+    wx.showLoading({
+      title: '加载中...',
+    })
     wx.getLocation({
+      type:'wgs84',
       success: function(res) {
         console.log(res)
+        if(res){
+          wx.request({
+              url: `http://api.map.baidu.com/reverse_geocoding/v3/?ak=DdZVV8h2cPZSwTZIvXN7BfGBMikCH5Lw&output=json&coordtype=wgs84ll&location=${res.latitude},${res.longitude}`,
+            method :'GET',
+            success(res){
+              wx.hideLoading()
+              that.setData({
+                currentLocation: res.data.result.formatted_address
+              })
+            }
+          })
+        }
       },
+    })
+  },
+
+  // 日期选择器
+  bindDateChange(e){
+    console.log(e)
+    let date = e.detail.value.split('-').join('.')
+    that.setData({
+      date: date
     })
   },
   /**
