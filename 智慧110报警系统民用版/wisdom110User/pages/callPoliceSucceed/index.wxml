@@ -1,0 +1,59 @@
+<view class='call-police-succeed'>
+  <!-- 地图 -->
+  <view class="map_container">
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+    <!-- 安全中心 -->
+    <view class='safety'>
+      <view class='safety-btn'>
+        <view class='safety-icon'></view>
+        <view class='safety-text'>安全中心</view>
+      </view>
+    </view>
+    <!-- 通知区 -->
+    <view class='inform'>
+      <view class='inform-icon'><text class='iconfont icon-laba'></text></view>
+      <text>警察马上到达，请您不要着急</text>
+    </view>
+  </view>
+
+  <!-- 底部 -->
+  <view class='footer'>
+    <!-- 警察信息 -->
+    <view class='footer-police'>
+      <view class='footer-police-message'>
+        <view class='police-serialNum'>闽-B0007
+          <text>警</text>
+        </view>
+        <view class='police-name'>刘警官
+          <text>5.0</text>
+        </view>
+      </view>
+      <!-- 头像 -->
+      <view class='footer-police-HeadPortrait'>
+        <view class='icon-Cart'></view>
+        <view class='HeadPortrait'>
+          <view>
+            <image src='/static/images/t01d2efb525aecace3c.jpg'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 联系方式 -->
+    <view class='footer-bottom'>
+      <view class='footer-call'>
+        <view class='call-police'>
+          <text class=''></text>
+          <text></text>
+        </view>
+        <view class='call-police' wx:for="{{callPolice}}" wx:key="index">
+          <text class='iconfont {{item.icon}}'></text>
+          <text>{{item.text}}</text>
+        </view>
+        <view class='call-police'>
+          <text class='iconfont icon-gengduo'></text>
+          <text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

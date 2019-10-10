@@ -22,6 +22,7 @@
     <view class='user-mask' bindtap='maskEnter'>
     </view>
   </view>
+  <!-- 获取手机号码 -->
   <view class="map_container">
     <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
     </map>

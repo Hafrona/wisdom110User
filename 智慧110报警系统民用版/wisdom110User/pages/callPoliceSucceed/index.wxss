@@ -1,0 +1,190 @@
+.map_container{ 
+    height: 80vh; 
+    width: 100%; 
+    position: relative;
+} 
+
+.map { 
+    height: 100%; 
+    width: 100%; 
+} 
+/* 安全中心 */
+.safety{
+  height: 100rpx;
+  width: 100%;
+  position: absolute;
+  bottom:135rpx;
+  left:0;
+  padding-left: 20rpx;
+}
+.safety .safety-btn{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.safety .safety-icon{
+  width: 90rpx;
+  height:90rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  z-index: 100;
+}
+.safety .safety-text{
+  height: 75rpx;
+  width: 220rpx;
+  background: linear-gradient(#c0c8cb,#eeeff1,#eeeff1);
+  box-shadow: 0rpx 0rpx 10rpx #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:38rpx;
+  margin-left: -45rpx;
+}
+/* 通知 */
+.inform{
+  position: absolute;
+  bottom: 5rpx;
+  left:0;
+  height: 130rpx;
+  background: linear-gradient(#cbd3e0,#ebf0f4);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#666;
+}
+.inform .inform-icon{
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right:4rpx solid #a4acb9;
+}
+.inform .inform-icon text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #c9c9c9;
+  border-radius: 50%;
+  font-size: 50rpx;
+}
+.inform >text{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding-left:20rpx;
+}
+/* 底部警察信息及联系方式 */
+.footer{
+  height: 20vh;
+  width: 100%;
+}
+.footer .footer-police{
+  height: 55%;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #97a3b1;
+  display: flex;
+}
+.footer-police .footer-police-message{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20rpx;
+}
+.footer-police-message .police-serialNum{
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+.police-serialNum >text{
+  color:#e00116;
+}
+.footer-police-message .police-name{
+  font-size: 26rpx; 
+}
+.police-name >text{
+  margin-left: 30rpx;
+  font-size: 20rpx;
+}
+.footer-police .footer-police-HeadPortrait{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right:30rpx;
+  align-items: center;
+}
+.icon-Cart{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #fff;
+}
+.HeadPortrait{
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #2c80be;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+.HeadPortrait>view{
+  width: 70rpx;
+  height: 70rpx;
+  border:2rpx solid #fff;
+  border-radius: 50%;
+}
+.HeadPortrait>view image{
+  width: 100%;
+  height:100%;
+  border-radius: 50%;
+}
+.HeadPortrait::after{
+  content:" ";
+  width: 15rpx;
+  height:30rpx;
+  border-radius: 0 15rpx 15rpx 0;
+  background-color: #2c80be;
+  position:absolute;
+  top:32rpx;
+  right:-10rpx;
+}
+.footer .footer-bottom{
+  height: 45%;
+  width: 100%;
+  background: linear-gradient(#cbd3e0,#ebf0f4);
+  display: flex;
+  align-items: center;
+}
+.footer-call{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+.call-police{
+  width: 20%;
+  height: 100%;
+  border-left:2rpx solid #97a3b1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+.call-police text:nth-child(1){
+  font-size: 36rpx;
+}
+.call-police:nth-child(1){
+  width: 15%;
+  border-left: none;
+}
+.call-police:last-child{
+  width: 15%;
+}

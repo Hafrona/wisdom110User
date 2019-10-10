@@ -1,7 +1,7 @@
 /**app.wxss**/
 @import "/static/style/stylesheet.wxss";
 page{
-  background-color: #eceff4;
+  background-color: #cbd3e0;
 }
 .container {
   height: 100%;
