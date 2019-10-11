@@ -1,6 +1,9 @@
 <view class='identity'>
+  <!-- 头部组件 -->
   <Head headTitle="{{headTitle}}" />
+  <!-- 上传个人身份证 -->
   <view class='identity-content'>
+    <!-- 上传照片 -->
     <view class='personal-photo'>
       <text>1.请上传个人照片，将作为个人信息提示</text>
       <view class='upPhoto'>
@@ -16,6 +19,7 @@
         </view>
       </view>
     </view>
+    <!-- 上传身份证 -->
     <view class='identity-card'>
       <text>2.请上传个人身份证，保证文字内容清晰</text>
       <view class='upPhoto'>
@@ -31,21 +35,23 @@
         </view>
       </view>
     </view>
+    <!-- 确认信息是否正确 -->
     <view class='user-message'>
       <text>3.请确认以下信息是否正确，正确请点击确认</text>
       <view class='identity-user-name'>
         <input placeholder='真实姓名：'></input>
         <view class='user-name-checkbox'>
-          <checkbox></checkbox>
+          <checkbox class='affirm-checked'></checkbox>
         </view>
       </view>
       <view class='identity-number'>
         <input placeholder='身份证号：'></input>
         <view class='identity-number-checkbox'>
-          <checkbox></checkbox>
+          <checkbox class='affirm-checked'></checkbox>
         </view>
       </view>
     </view>
   </view>
+  <!-- 底部组件 -->
   <Footer affirm="{{footerText}}" />
 </view>

@@ -5,8 +5,12 @@
     <!-- 安全中心 -->
     <view class='safety'>
       <view class='safety-btn'>
-        <view class='safety-icon'></view>
-        <view class='safety-text'>安全中心</view>
+        <view class='safety-icon'>
+          <view class='iconfont icon-anquan safety-content'>
+          </view> 
+          <view class='iconfont icon-jiantou safety-icon-pointTo'></view>
+        </view>
+        <view class='safety-text'>安全中心 <text class='iconfont icon-jiantou'></text></view>
       </view>
     </view>
     <!-- 通知区 -->
@@ -32,9 +36,10 @@
       <view class='footer-police-HeadPortrait'>
         <view class='icon-Cart'></view>
         <view class='HeadPortrait'>
-          <view>
+          <view class='HeadPortrait-image'>
             <image src='/static/images/t01d2efb525aecace3c.jpg'></image>
           </view>
+          <view class='iconfont icon-jiantou HeadPortrait-icon'></view>
         </view>
       </view>
     </view>
@@ -45,9 +50,23 @@
           <text class=''></text>
           <text></text>
         </view>
-        <view class='call-police' wx:for="{{callPolice}}" wx:key="index">
-          <text class='iconfont {{item.icon}}'></text>
-          <text>{{item.text}}</text>
+        <view class='call-police'>
+          <text class='iconfont icon-xinxi'></text>
+          <text>发信息</text>
+          <text class='message-remind'>2</text>
+        </view>
+        <view class='call-police'>
+          <text class='iconfont icon-dianhua'></text>
+          <text>打电话</text>
+          <text class='message-remind'>1</text>
+        </view>
+        <view class='call-police'>
+          <text class='iconfont icon-quxiao'></text>
+          <text>取消报警</text>
+        </view>
+        <view class='call-police'>
+          <text class='iconfont icon-dizhi1'></text>
+          <text>选择路线</text>
         </view>
         <view class='call-police'>
           <text class='iconfont icon-gengduo'></text>

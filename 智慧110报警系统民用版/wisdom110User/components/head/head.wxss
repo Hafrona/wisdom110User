@@ -1,10 +1,29 @@
 @import "/app.wxss";
+
 .head {
   height: 7vh;
   width: 100%;
   display: flex;
   background-color: #0082d6;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.head::after, .head::before {
+  content: " ";
+  height: 170%;
+  width: 15%;
+  position: absolute;
+  top: -25rpx;
+  left: 250rpx;
+  background: linear-gradient(to right, #0082d6, #fff,#fff);
+  transform: rotate(15deg);
+  opacity: 0.2;
+}
+
+.head::before {
+  left: 80rpx;
 }
 
 .head-close {
@@ -15,7 +34,8 @@
   padding-left: 30rpx;
   box-sizing: border-box;
 }
-.head-close text{
+
+.head-close text {
   font-size: 50rpx;
 }
 
@@ -37,6 +57,23 @@
   padding-right: 30rpx;
   align-items: center;
 }
-.head-option text{
+
+.head-option text {
   font-size: 50rpx;
+}
+
+.texture {
+  height: 150%;
+  width: 20%;
+  position: absolute;
+  top: -30rpx;
+  left: 210rpx;
+  background: linear-gradient(to right, #0082d6, #379ddf, #fff);
+  transform: rotate(10deg);
+  opacity: 0.3;
+}
+
+.texture:nth-child(2) {
+  /* top:-10rpx; */
+  left: 80rpx;
 }

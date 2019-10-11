@@ -15,9 +15,10 @@
               <text>手机号</text>
               <input value='13905941234'></input>
             </view>
-            <view class='form-call'>
+            <view class='form-call form-location'>
               <text>地址详情</text>
-              <input value="国际大厦2号楼1501"></input>
+              <input value="{{location}}" ></input>
+              <text class='frequently-location'>常用地址</text>
             </view>
             <view class='form-call'>
               <text>涉案人数</text>

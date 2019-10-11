@@ -1,6 +1,8 @@
 <view class='head'>
+  <!-- <view class='texture'></view>
+  <view class='texture'></view> -->
   <view class='head-close' >
-    <text class='iconfont icon-guanbi'></text>
+    <text class='iconfont icon-guanbi' bindtap='closePage'></text>
   </view>
   <text>{{headTitle}}</text>
   <view class='head-option '>

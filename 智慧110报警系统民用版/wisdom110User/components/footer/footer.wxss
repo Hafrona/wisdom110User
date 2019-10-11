@@ -5,9 +5,27 @@
   justify-content: center;
   align-items: center;
   background-color: #0082d6;
+  position: relative;
+  overflow: hidden;
 }
 .footer-uploading{
   color: #fff;
   font-weight: 600;
   font-size: 32rpx;
+}
+
+.footer::after, .footer::before {
+  content: " ";
+  height: 170%;
+  width: 15%;
+  position: absolute;
+  top: -25rpx;
+  left: 250rpx;
+  background: linear-gradient(to right, #0082d6, #fff,#fff);
+  transform: rotate(15deg);
+  opacity: 0.2;
+}
+
+.footer::before {
+  left: 80rpx;
 }

@@ -6,7 +6,6 @@ Page({
     IdentityImage:"",
   },
   onLoad: function (options) {
-    
   },
   // 上传个人照片
   upUserImage() {

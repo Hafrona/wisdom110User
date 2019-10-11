@@ -7,12 +7,6 @@ Page({
     latitude: '',
     longitude: '',
     placeData: {},
-    callPolice:[
-      { text: "发信息", id: 1, icon:"icon-xinxi"},
-      { text: "打电话", id: 2, icon:"icon-dianhua"},
-      { text: "取消报警", id: 3, icon: "icon-quxiao" },
-      { text: "选择路线", id: 4, icon: "icon-dizhi1" },
-    ]
   },
   makertap: function (e) {
     var that = this;

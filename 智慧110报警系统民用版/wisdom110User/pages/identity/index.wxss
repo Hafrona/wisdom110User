@@ -51,6 +51,7 @@
   height: 25%;
 }
 .user-message{
+  
 }
 .identity-user-name,.identity-number{
   height: 25%;
@@ -64,9 +65,27 @@
   width: 10%;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-.user-name-checkbox>checkbox,.identity-number-checkbox>checkbox{
+.affirm-checked{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 选项框大小 */
+.affirm-checked .wx-checkbox-input{
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+}
+/* checkbox选中后图标样式 */
+.affirm-checked .wx-checkbox-input.wx-checkbox-input-checked::before{
+  content: " ";
+  width: 70%;
+  height: 70%;
+  background-color: #8090a7;
+  border-radius: 50%;
 }
 .identity-number >input,.identity-user-name>input{
   width:90%;

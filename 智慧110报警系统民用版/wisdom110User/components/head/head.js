@@ -12,6 +12,10 @@ Component({
 
   },
   methods: {
-
+    closePage(){
+      wx.navigateBack({
+        delta:1
+      })
+    }
   }
 })

@@ -77,10 +77,9 @@
   padding: 0;
   font-size: 24rpx;
   line-height: 40rpx;
-  background-color: #fef000;
+  background-color: #fcf00c;
   color: #999;
 }
-
 .call-police-button {
   height: 160rpx;
   width: 160rpx;
@@ -105,7 +104,7 @@
   align-items: center;
   padding:10rpx;
   /* background: linear-gradient(#f79309, #ed4806, #df0010); */
-  background: radial-gradient(#f79309, #ed4806, red);
+  background: radial-gradient(circle,#f79309, red, #df010c);
 }
 .call-police-button .call-border >view{
   height: 100rpx;
@@ -187,8 +186,20 @@
   width: 55%;
   height: 100%;
   background-color: #fff;
+  position: relative;
 }
-
+.statement {
+  position: absolute;
+  bottom:50rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+}
+.statement>text{
+  display: inline-block;
+  transform: rotate(-90deg);
+}
 .user-name {
   height: 20%;
   display: flex;

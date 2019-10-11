@@ -41,14 +41,23 @@ Page({
   unfold(data) {
     const { index } = data.currentTarget.dataset
     let { incidentList } = this.data
-    if (incidentList[index].unfoldIndex === false) {
-      incidentList[index].unfoldIndex = true
-    } else {
+    if (incidentList[index].unfoldIndex === true) {
       incidentList[index].unfoldIndex = false;
+    } else {
+      incidentList[index].unfoldIndex = true;
     }
     this.setData({
-      incidentList: incidentList
+      incidentList: incidentList,
+    })
+  },
+  // 点击的动画
+  animation() {
+    let animation = wx.createAnimation({
+      duration: 200,
+    })
+    animation.rotate(180).step();
+    this.setData({
+      unfoldAnimation: animation.export()
     })
   }
-
 })

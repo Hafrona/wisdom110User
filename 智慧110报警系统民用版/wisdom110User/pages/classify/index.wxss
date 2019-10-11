@@ -80,6 +80,20 @@
   border:2rpx solid #ededed;
   border-radius: 10rpx;
 }
+.form-location text{
+  width: 20%;
+}
+.form-location input{
+  width: 55%;
+}
+.frequently-location{
+  color:#08bb5d;
+  margin-right: 0 !important;
+}
+.frequently-location:hover{
+  background-color: #ededed;
+  border-radius: 15rpx;
+}
 .form-call:nth-child(even){
   background-color: #fff;
 }

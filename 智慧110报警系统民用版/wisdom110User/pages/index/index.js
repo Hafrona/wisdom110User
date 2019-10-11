@@ -16,12 +16,12 @@ Page({
     userShow: true,
     //当前用户的位置
     userPlace: '',
-    userAnimation: {},
+    // 侧边菜单导航
     userNav: [{
       name: '搜索历史',
       id: 1,
       icon: '.icon-zhankai',
-      url: ""
+      url: "/pages/history/index"
     },
     {
       name: '实名认证',
@@ -46,7 +46,7 @@ Page({
   makertap: function (e) {
     var that = this;
     var id = e.markerId;
-    that.showSearchInfo(wxMarkerData, id);
+    // that.showSearchInfo(wxMarkerData, id);
     that.changeMarkerColor(wxMarkerData, id);
   },
   onLoad: function () {
@@ -58,8 +58,9 @@ Page({
     let fail = function (data) {
       console.log(data)
     };
-    let success = function (data) {
+    let success =  data => {
       wxMarkerData = data.wxMarkerData;
+      wx.setStorageSync("userLocation", wxMarkerData)
       that.setData({
         markers: wxMarkerData,
         longitude: wxMarkerData[0].longitude,
@@ -75,16 +76,16 @@ Page({
     });
 
   },
-  showSearchInfo: function (data, i) {
-    var that = this;
-    console.log(data)
-    that.setData({
-      rgcData: {
-        address: '您当前的位置：' + data[i].address,
-        desc: '描述：' + data[i].desc,
-      }
-    });
-  },
+  // 点击显示当前位置
+  // showSearchInfo: function (data, i) {
+  //   var that = this;
+  //   that.setData({
+  //     rgcData: {
+  //       address: '您当前的位置：' + data[i].address,
+  //       desc: '描述：' + data[i].desc,
+  //     }
+  //   });
+  // },
   // 地图标记
   changeMarkerColor: function (data, i) {
     var that = this;
@@ -94,6 +95,9 @@ Page({
     that.setData({
       markers: data
     });
+  },
+  verificationCode(){
+    
   },
   // 点击左上角我的，进入我的页面
   user() {
@@ -113,12 +117,13 @@ Page({
       userShow: !userShow
     })
   },
+  // 点击我要报警之后跳转到出警页面
   callThePolice() {
     wx.navigateTo({
       url: '/pages/classify/index'
     })
   },
-  NavIndex(index) {
+  navIndex(index) {
     var { index } = index.currentTarget.dataset
     let { userNav } = this.data
     wx.navigateTo({

@@ -12,20 +12,43 @@ Page({
       { name: '其他', id: 8 }
     ],
     classifyParticulars:true,
+    location:"请输入当前地址"
   },
+  onLoad(){
+    this.location()
+  },
+  // 点击弹框
   openParticulars(){
     let { classifyParticulars } = this.data
     this.setData({
       classifyParticulars:false
     })
   },
+  // 点击遮罩层隐藏弹框
   maskShow(){
     let { classifyParticulars } = this.data
     this.setData({
       classifyParticulars: true
     })
   },
+
   stopMask(){
   },
-  confirm(){}
+  // 点击确定按钮跳转
+  confirm(){
+    this.setData({
+      classifyParticulars:true
+    })
+    wx.navigateTo({
+      url: '/pages/callPoliceSucceed/index',
+    })
+  },
+  // 本地存储中拿到用户的当前位置
+  location(){
+    let userLocation = wx.getStorageSync("userLocation")
+    const { address } = userLocation[0]
+    this.setData({
+      location: address
+    })
+  }
 })
