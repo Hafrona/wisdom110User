@@ -29,10 +29,10 @@
               <input value='是'></input>
             </view>
             <view class='locale'>
-              <text>现场图片</text>
-              <text class='iconfont icon-tianjia'></text>
-              <text class='iconfont icon-tupian'></text>
-              <text class='iconfont icon-lajitong'></text>
+              <text style='vertical-align: middle;'>现场图片</text>
+              <text class='add-image iconfont icon-tianjia' catchtap='addImage'></text>
+              <!-- <text class='iconfont icon-tupian'></text> -->
+              <text class='icon-delete iconfont icon-lajitong'></text>
             </view>
           </view>
           <button class='particulars-formBtn' formType="submit"  bindtap='confirm'>确定

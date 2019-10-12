@@ -64,7 +64,10 @@ Page({
       that.setData({
         markers: wxMarkerData,
         longitude: wxMarkerData[0].longitude,
-        latitude: wxMarkerData[0].latitude
+        latitude: wxMarkerData[0].latitude,
+        rgcData: {
+          address: '您当前的位置：' +  wxMarkerData[0].address,
+        }
       });
     }
     // 发起regeocoding检索请求 
@@ -101,12 +104,18 @@ Page({
   },
   // 点击左上角我的，进入我的页面
   user() {
-    let {
-      userShow
-    } = this.data
+    let {userShow} = this.data
     this.setData({
       userShow: !userShow
     })
+    // let animation = wx.createAnimation({
+    //   duration: 400
+    // })
+    // animation.opacity().step();
+    // this.setData({
+    //   userAnimation:animation.export()
+    // })
+    
   },
   // 点击遮罩层关闭侧边菜单
   maskEnter() {

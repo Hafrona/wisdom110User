@@ -17,11 +17,11 @@
         <view class='user'>
           <view class='user-name'>
             <text>刘警官</text>
-            <text>5.0</text>
+            <view class='icon-star'><image src='/static/images/manxing.jpg'></image> <text>5.0</text></view>
             <text>15单</text>
           </view>
           <view class='user-serialNum'>
-            闽-B0007警
+            闽-B0007<text>警</text>
           </view>
         </view>
       </view>
@@ -46,10 +46,19 @@
         <swiper-item>
         </swiper-item>
         <swiper-item class="grade">
-          <view class='grade-star'>星星</view>
+          <!-- 星级评分 -->
+          <view class='grade-star'>
+              <block wx:for="{{stars}}" wx:key="index">
+                <image class="star-image" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+                  <view class="star-left" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+                  <view class="star-right" data-key="{{item+1}}" bindtap="selectRight"></view>
+                </image>
+              </block>
+          </view>
+          <!-- 选择标签 -->
           <view class='grade-label'>
-            <view class='label' wx:for="{{labelNav}}" wx:key="index" bindtap='labelNavClick' data-index="{{item.id}}">
-              <text class='{{item.labelActive?"labelActive":""}}'>{{item.text}}</text>
+            <view class='label' wx:for="{{labelNav}}" wx:key="index">
+              <text class='{{item.labelActive?"labelActive":""}}' bindtap='labelNavClick' data-index="{{item.id}}">{{item.text}}</text>
             </view>
           </view>
         </swiper-item>

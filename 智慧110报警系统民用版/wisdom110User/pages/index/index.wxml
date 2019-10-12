@@ -6,7 +6,7 @@
     <text>莆田市</text>
   </view>
   <!-- 我的 -->
-  <view class='user' hidden='{{userShow}}'>
+  <view class='user' hidden='{{userShow}}' animation="{{userAnimation}}">
     <view class='user-nav'>
       <view class='user-name'>
         <view class='user-headPortrait'><image src='/static/images/t01d2efb525aecace3c.jpg' mode='widthFix	'></image></view>
@@ -37,6 +37,7 @@
     <view class='call-police-button' bindtap='callThePolice'>
       <view class='call-border'>
         <view>
+          <!-- <image src='/static/images/jingbao01.jpg' mode='widthFix'></image> -->
           <text class='iconfont icon-jingbao'></text>
           我要报警
         </view>

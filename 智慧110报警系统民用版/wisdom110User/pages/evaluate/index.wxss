@@ -65,14 +65,25 @@
   font-size: 30rpx;
 }
 
-.user .user-name >text:nth-child(2) {
+.user .user-name >.icon-star {
+  display: inline-block;
+  color: #fe9f07;
   border-left: 4rpx solid #999;
   font-size: 20rpx;
-  color: #666;
   padding: 0 20rpx;
   margin-left: 10rpx;
+  
 }
-
+.icon-star image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.icon-star text{
+  color: #666;
+}
+.user-serialNum text{
+  color: #e00116;
+}
 .content-user-call {
   flex: 3;
   display: flex;
@@ -115,19 +126,35 @@
   height: 100%;
 }
 .grade-star {
-  height: 40%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.star-image{
+  width: 50rpx;
+  height: 50rpx;
+  src: "/static/images/manxing.jpg";
+  position: relative;
+  margin:10rpx;
+}
+.star-left,.star-right{
+  position: absolute;
+  top: 0rpx;
+  width: 25rpx;
+  height: 50rpx;
+}
+.star-right{
+  right: 0;
+}
 .grade-label {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .label {
-  width: 50%;
+  width: 35%;
   margin-bottom: 25rpx;
   box-sizing: border-box;
 }
@@ -143,7 +170,7 @@
 }
 
 .label text {
-  width: 70%;
+  width: 100%;
   display: flex;
   height: 100%;
   justify-content: center;

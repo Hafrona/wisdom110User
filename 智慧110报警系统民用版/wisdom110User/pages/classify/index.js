@@ -24,6 +24,15 @@ Page({
       classifyParticulars:false
     })
   },
+  //添加图片
+  addImage(){
+    wx.chooseImage({
+      // sourceType:[],
+      success(res){
+        console.log(res)
+      }
+    })
+  },
   // 点击遮罩层隐藏弹框
   maskShow(){
     let { classifyParticulars } = this.data

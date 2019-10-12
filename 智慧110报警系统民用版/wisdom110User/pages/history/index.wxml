@@ -6,7 +6,7 @@
       <view class='incident-origin' bindtap='unfold' data-index='{{index}}'>
         {{item.name}}
         <text class='iconfont icon-huabanfuben' 
-        animation="{{unfoldAnimation}}"
+        animation="{{ index === animationIndex ? unfoldAnimation:''}}"
         >
         </text>
       </view>
