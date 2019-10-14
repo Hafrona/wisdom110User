@@ -5,7 +5,9 @@
     "pages/evaluate/index",
     "pages/history/index",
     "pages/identity/index",
-    "pages/callPoliceSucceed/index"
+    "pages/callPoliceSucceed/index",
+    "pages/camera/index",
+    "pages/frequentlyLocation/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

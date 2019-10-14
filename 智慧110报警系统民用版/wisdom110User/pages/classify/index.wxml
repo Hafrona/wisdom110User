@@ -18,7 +18,7 @@
             <view class='form-call form-location'>
               <text>地址详情</text>
               <input value="{{location}}" ></input>
-              <text class='frequently-location'>常用地址</text>
+              <text class='frequently-location' bindtap='frequently'>常用地址</text>
             </view>
             <view class='form-call'>
               <text>涉案人数</text>
@@ -30,8 +30,8 @@
             </view>
             <view class='locale'>
               <text style='vertical-align: middle;'>现场图片</text>
-              <text class='add-image iconfont icon-tianjia' catchtap='addImage'></text>
-              <!-- <text class='iconfont icon-tupian'></text> -->
+              <text class='add-image iconfont icon-tianjia' catchtap='addImageVideo'></text>
+              <text class='look-image iconfont icon-tupian' catchtap='lookImage' wx:for="{{photoData}}" wx:key="index"></text>
               <text class='icon-delete iconfont icon-lajitong'></text>
             </view>
           </view>

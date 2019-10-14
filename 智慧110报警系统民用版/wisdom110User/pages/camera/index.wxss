@@ -1,0 +1,48 @@
+.camera{
+  width: 100vw;
+  height: 100vh;
+
+}
+.camera camera{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.photo-video{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #ededed;
+  position: absolute;
+  bottom: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-photo-video{
+  width: 75%;
+  height: 75%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.photo-video-text{
+  width: 350rpx;
+  position: absolute;
+  bottom:25%;
+  left:50%;
+  text-align: center;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 30rpx;
+}
+cover-image{
+  width: 150rpx;
+  height: 200rpx;
+  position: absolute;
+  bottom: 50rpx;
+  left: 50rpx;
+  border:2rpx solid #fff;
+  border-radius: 10rpx;
+}

@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -74,6 +74,21 @@
 					"id": -1,
 					"name": "出警页面",
 					"pathName": "pages/callPoliceSucceed/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "相机demo",
+					"pathName": "pages/demo/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "常用地址",
+					"pathName": "pages/frequentlyLocation/index",
+					"query": "",
 					"scene": null
 				}
 			]

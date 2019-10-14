@@ -5,9 +5,22 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 .case-type:nth-child(odd){
   border-right: 4rpx solid #eceff4;
+}
+.case-type:nth-child(1){
+  border-radius: 20rpx 0 0 0;
+}
+.case-type:nth-child(2){
+  border-radius: 0 20rpx 0 0;
+}
+.case-type:nth-last-child(2){
+  border-radius: 0 0 20rpx 0;
+}
+.case-type:nth-last-child(3){
+  border-radius: 0 0 0 20rpx;
 }
 .case-type{
   width: 50%;
@@ -81,11 +94,6 @@
   border:2rpx solid #ededed;
   border-radius: 10rpx;
 }
-.locale .add-image{
-  font-size: 42rpx;
-  width: 70rpx;
-  height: 100%;
-}
 .form-location text{
   width: 20%;
 }
@@ -109,21 +117,35 @@
   align-items: center;
   color:#707f92;
 }
-.form-call text,.locale text{
+.form-call text{
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
-  /* margin-right: 20rpx; */
+  margin-right: 10rpx;
   font-size: 32rpx;
 }
 .locale{
   position: relative;
 }
+.locale text:nth-child(1){
+  margin-right: 10rpx;
+}
 .locale .icon-delete{
   position: absolute;
   top:0;
   right:0;
+}
+.locale .add-image,.look-image,.icon-delete{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42rpx;
+  width: 50rpx;
+  height: 100%;
+}
+.locale .add-image{
+  width: 70rpx;
 }
 .particulars-formBtn {
   width: 200rpx;
@@ -138,3 +160,9 @@
   bottom:10rpx;
   left:240rpx;
 }
+/* Camera{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1000;
+} */

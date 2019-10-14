@@ -12,10 +12,26 @@ Page({
       { name: '其他', id: 8 }
     ],
     classifyParticulars:true,
-    location:"请输入当前地址"
+    location:"请输入当前地址",
+    // 图片
+    pic:[],
+    photoData:[]
   },
   onLoad(){
     this.location()
+  },
+  onShow() {
+    let { photoData } = this.data
+    photoData = wx.getStorageSync("photoData")
+    this.setData({
+      photoData
+    })
+  },
+  onUnload() {
+    let photoData = wx.getStorageSync("photoData")
+    if (photoData) {
+      wx.removeStorageSync("photoData")
+    }
   },
   // 点击弹框
   openParticulars(){
@@ -24,14 +40,15 @@ Page({
       classifyParticulars:false
     })
   },
-  //添加图片
-  addImage(){
-    wx.chooseImage({
-      // sourceType:[],
-      success(res){
-        console.log(res)
-      }
+  // 点击添加图片显示拍照界面
+  addImageVideo(){
+    wx.navigateTo({
+      url: '/pages/camera/index',
     })
+  },
+  // 查看图片
+  lookImage(){
+    console.log(this.data.pic)
   },
   // 点击遮罩层隐藏弹框
   maskShow(){
@@ -58,6 +75,12 @@ Page({
     const { address } = userLocation[0]
     this.setData({
       location: address
+    })
+  },
+  // 跳转到添加常用地址
+  frequently(){
+    wx.navigateTo({
+      url: '/pages/frequentlyLocation/index',
     })
   }
 })

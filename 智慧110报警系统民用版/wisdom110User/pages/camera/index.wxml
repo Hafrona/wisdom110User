@@ -1,0 +1,11 @@
+<view class='camera'>
+  <camera>
+    <cover-view class='photo-video-text'>轻触拍照，长按摄像</cover-view>
+    <cover-view class='photo-video'>
+      <cover-view class='btn-photo-video' bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" bindtap="handleClick">
+      </cover-view>
+    </cover-view>
+    <cover-image wx:if="{{photoData.length > 0}}" src='{{showPhoto.src}}'></cover-image>
+  </camera>
+  <video ></video>
+</view>
