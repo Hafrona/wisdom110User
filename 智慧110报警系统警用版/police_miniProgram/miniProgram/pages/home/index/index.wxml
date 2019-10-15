@@ -27,19 +27,19 @@
       </view>
     </view>
     <view class="menu flex-box-v flex-1">
-      <li>
+      <li catchtap="clickHistory">
         <image src="../../../assets/images/menu.png"></image>
         <text>出警历史</text>
       </li>
-      <li>
+      <li catchtap="clickEvaluate">
         <image src="../../../assets/images/gou_selected.png"></image>
         <text>我的评价</text>
       </li>
-      <li>
+      <li catchtap="clickCard">
         <image src="../../../assets/images/card.png"></image>
         <text>巡逻打卡</text>
       </li>
-      <li>
+      <li catchtap="clickSetting">
         <image src="../../../assets/images/setting.png"></image>
         <text>设置</text>
       </li>
@@ -49,7 +49,10 @@
     </view>
   </view>
   <view  class="mapContent">
-    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true" scale="16" controls="{{controls}}" markers="{{markers}}" show-location style="width: 100%; height: 100%;"></map>
+    <view class="returnBack" catchtap="clickcontrols">
+      <image src="../../../assets/images/returnBack.png"></image>
+    </view>
   </view>
   <view class="footer">
     <!-- 底部提示消息 -->
@@ -57,7 +60,7 @@
       <view class="icon">
         <image src="../../../assets/images/laba.png"></image>
       </view>
-      <text>您当前的位置：骠骑网络</text>
+      <view class="text">您当前的位置：{{localAddress}}</view>
     </view>
     <!-- 我要出警 -->
     <view class="bottom_btn" catchtap="onCase">

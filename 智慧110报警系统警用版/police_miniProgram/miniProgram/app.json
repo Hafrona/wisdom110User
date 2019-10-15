@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/home/index/index",
-    "pages/testIndex/testIndex",
     "pages/onCase/index/index",
     "pages/my/caseHistory/caseHistory",
     "pages/my/evaluate/evaluate",

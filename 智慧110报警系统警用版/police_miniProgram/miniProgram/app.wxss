@@ -153,6 +153,7 @@ button::after{ border: none; }
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
+  z-index: 1001
 }
 
 /* 菜单栏出现动画 */
@@ -163,7 +164,7 @@ button::after{ border: none; }
   animation: closetranslate 0.3s ease-in-out
 }
 .openMask{
-  animation: showMask 0.3s ease-in-out
+  animation: showMask 0.3s ease-in
 }
 .closeMask{
   animation: hideMask 0.3s ease-in-out

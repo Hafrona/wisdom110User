@@ -2,27 +2,15 @@
 let i ;
 App({
   globalData: {
-    userInfo: null
+    userInfo: null,
+    latitude:null,
+    longitude:'',
   },
   onLaunch: function() {
     i = this
-    i.getLocation()
-  },
-  // 当前位置
-  getLocation: function() {
-    wx.getLocation({
-      success: function(res) {
-        console.log(res)
-        let latitude = res.latitude
-        let longitude = res.longitude
-        let add = `http://api.map.baidu.com/direction/v2/transit?location =${latitude},${longitude}&ak=DdZVV8h2cPZSwTZIvXN7BfGBMikCH5Lw` //GET请求
-        i.get2(add).then((res)=>{
-          console.log(res)
-        })
-      },
-    })
   },
 
+  // 当前位置
   /**
    * POST请求数据
    * type : post -- POST请求
@@ -55,7 +43,7 @@ App({
   
   /**
    * GET请求数据
-   * type : get  -- GET 请求
+   * type : GET
    * @param
    * url : 接口路径
    * data : 需要的字段

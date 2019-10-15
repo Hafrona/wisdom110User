@@ -62,7 +62,7 @@
     </view>
     <!-- 打卡按钮 -->
     <view class="carBtn flex-box-v flex-center-center">
-      <view class="btn flex-box-v flex-center-center">
+      <view class="btn flex-box-v flex-center-center" bindtap="clockIn">
         <text>巡逻打卡</text>
         <text class="cardTime">{{time}}</text>
       </view>

@@ -20,7 +20,7 @@
   line-height: 80rpx;
   background: #d2d9e3;
   box-shadow:  0 0 5rpx 0 #d2d9e3 inset;
-  z-index: 999;
+  z-index: 1001;
 }
 .header .personal{
   position: absolute;
@@ -55,7 +55,7 @@
   width: 400rpx;
   height: 100vh;
   background: #ffffff;
-  z-index: 1001;
+  z-index: 9999;
 }
 .personalNav .top{
   margin-bottom: 50rpx;
@@ -138,6 +138,17 @@
   text-align: center;
 }
 
+/* 回到自己位置的按钮 */
+.returnBack{
+  position: fixed;
+  left: 10rpx;
+  bottom: 230rpx;
+}
+.returnBack image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
 .footer{
   position: fixed;
   bottom: 0;
@@ -151,6 +162,7 @@
   background: #cdd5e0;
   border: 1px solid #c0c0c0;
   padding: 10rpx 0;
+  box-sizing: border-box;
 }
 .footer .message .icon{
   width: 100rpx;
@@ -158,7 +170,7 @@
   text-align: center;
   border-right: 1px solid #797979;
 }
-.footer .message text{
+.footer .message .text{
   padding: 0 12rpx;
   color: #797979
 }
@@ -169,11 +181,13 @@
   padding: 20rpx;
 }
 .footer .bottom_btn{
-  text-align: center;
   color: #ffffff;
   font-size: 36rpx;
   height: 100rpx;
-  line-height: 100rpx;
   background: #0082d6;
   box-shadow: 0 0 10rpx #1a6496 inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
