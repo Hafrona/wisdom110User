@@ -1,4 +1,4 @@
-// pages/classify/index.js
+import { getStorageImage,getStorageUserLocation } from "../../utils/storage.js"
 Page({
   data: {
     classifyNav:[
@@ -22,14 +22,13 @@ Page({
   },
   onShow() {
     let { photoData } = this.data
-    photoData = wx.getStorageSync("photoData")
+    photoData = getStorageImage()
     this.setData({
       photoData
     })
   },
   onUnload() {
-    let photoData = wx.getStorageSync("photoData")
-    if (photoData) {
+    if (this.data.photoData) {
       wx.removeStorageSync("photoData")
     }
   },
@@ -71,7 +70,7 @@ Page({
   },
   // 本地存储中拿到用户的当前位置
   location(){
-    let userLocation = wx.getStorageSync("userLocation")
+    let userLocation = getStorageUserLocation()
     const { address } = userLocation[0]
     this.setData({
       location: address

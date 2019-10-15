@@ -3,7 +3,7 @@
     <view class='heard-user'>
       <text class='iconfont icon-yonghu' bindtap='user'></text>
     </view>
-    <text>莆田市</text>
+    <view class='city'>莆田市<text class='iconfont icon-jiantou'></text></view>
   </view>
   <!-- 我的 -->
   <view class='user' hidden='{{userShow}}' animation="{{userAnimation}}">
@@ -34,6 +34,7 @@
         <button size='mini' bindtap='verificationCode'>获取验证码</button>
       </view>
     </view>
+    <!-- 我要报警按钮 -->
     <view class='call-police-button' bindtap='callThePolice'>
       <view class='call-border'>
         <view>

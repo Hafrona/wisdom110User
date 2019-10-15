@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0082d6;
+  background-color: var(--themeBackgroundColor);
   position: relative;
   overflow: hidden;
 }

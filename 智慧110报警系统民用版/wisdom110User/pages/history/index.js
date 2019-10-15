@@ -24,7 +24,7 @@ Page({
       site: "福建省莆田市城厢区梅园路88号"
     }
     ],
-    animationIndex:""
+    animationIndex:"",
   },
   onLoad() {
     var time = util.formatTime(new Date());
@@ -39,23 +39,25 @@ Page({
   },
   // 点击展开收起
   unfold(data) {
+    // 传过来的索引
     const { index } = data.currentTarget.dataset;
+    // 历史纪录的数据
     let { incidentList } = this.data;
+    // 当前点击的
     let { unfoldIndex } = incidentList[index];
-    if (unfoldIndex){
+    if(unfoldIndex){
       this.animationOpen()
       incidentList[index].unfoldIndex = false
-    } else if (!unfoldIndex){
+    } else {
       this.animationClose()
       incidentList[index].unfoldIndex = true
     }
     this.setData({
-      incidentList: incidentList,
+      incidentList,
       animationIndex: index
     })
-
   },
-  // 点击的动画
+  // 点击展开动画
   animationOpen() {
     let animation = wx.createAnimation({
       duration: 200,
@@ -65,13 +67,14 @@ Page({
       unfoldAnimation: animation.export(),
     })
   },
+  // 点击关闭动画
   animationClose(){
     let animation = wx.createAnimation({
       duration: 200,
     })
     animation.rotate(0).step();
     this.setData({
-      unfoldAnimation: animation.export(),
+      closeAnimation: animation.export(),
     })
   }
 })

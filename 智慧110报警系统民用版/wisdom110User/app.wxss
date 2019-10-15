@@ -2,6 +2,7 @@
 @import "/static/style/stylesheet.wxss";
 page{
   background-color: #eceff4;
+  --themeBackgroundColor:#0082d6;
 }
 .container {
   height: 100%;

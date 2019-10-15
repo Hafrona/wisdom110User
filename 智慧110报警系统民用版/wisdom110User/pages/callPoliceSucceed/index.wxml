@@ -34,7 +34,7 @@
       </view>
       <!-- 头像 -->
       <view class='footer-police-HeadPortrait'>
-        <view class='icon-Cart'></view>
+        <view class='icon-Cart'><text class='iconfont icon-police-car'></text></view>
         <view class='HeadPortrait'>
           <view class='HeadPortrait-image'>
             <image src='/static/images/t01d2efb525aecace3c.jpg'></image>

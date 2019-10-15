@@ -156,9 +156,19 @@
   align-items: center;
 }
 .icon-Cart{
-  width: 100rpx;
-  height: 100rpx;
-  background-color: #fff;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.icon-Cart text{
+  opacity: .4;
+  font-size: 100rpx;
+  position: absolute;
+  right: -40rpx;
+
 }
 .HeadPortrait{
   width: 90rpx;

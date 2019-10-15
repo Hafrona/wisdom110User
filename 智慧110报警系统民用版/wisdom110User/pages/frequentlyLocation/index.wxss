@@ -1,17 +1,32 @@
 .frequently-location{
   width: 100vw;
   height: 100vh;
-
+  font-size: 30rpx;
+  --themeColor:#848ea7;
+  color: var(--themeColor);
 }
 .location-form{
   height: 86vh;
+  box-sizing: border-box;
   padding:10rpx 10rpx 0;
+  position: relative;
+}
+.location-form .form-btn{
+  position: absolute;
+  width: 100%;
+  border-radius: 0;
+  opacity: 0;
+  bottom: -83rpx;
+  left: 0rpx;
+  z-index: 1000;
 }
 .user-message{
   width: 100%;
   height: 40%;
   background-color: #fff;
   margin-bottom: 20rpx;
+  border-radius: 0 0 20rpx 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx #b3b3b3;
 }
 .user-message .message-input{
   height: 20%;
@@ -24,11 +39,18 @@
   height: 100%;
   width: 85%;
 }
-.message-input text{
+.message-input .link text{
+  transform: rotate(0);
+  font-size: 48rpx;
+}
+.message-input view{
   width: 15%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+.message-input view>text{
+  transform: rotate(-90deg);
 }
 .user-message textarea{
   box-sizing: border-box;
@@ -36,18 +58,50 @@
   width: 100%;
   height: 40%;
   padding: 10rpx 20rpx;
+   
 }
 .default{
   width: 100%;
   height: 20%;
   background-color: #fff;
+  border-radius: 0 0 20rpx 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx #b3b3b3;
 }
-.location-label{
+.default .location-label{
   height: 50%;
   box-sizing: border-box;
   border-bottom: 4rpx solid #ced5dd;
   padding: 0 20rpx;
   display: flex;
+
+}
+.default .location-label >text{
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+.default .location-label .class-label{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.default .location-label .class-label text{
+  width: 70%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:2rpx solid #c8d2dc;
+  border-radius:  25rpx;
+}
+.default .location-label .more-label{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.more-label text{
+  transform: rotate(-90deg);
 }
 .set-default{
   height: 50%;

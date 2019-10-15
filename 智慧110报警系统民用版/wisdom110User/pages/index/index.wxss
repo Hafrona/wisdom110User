@@ -22,14 +22,20 @@
   opacity: .5;
 }
 
-.heard >text {
+.heard .city {
   width: 57%;
   padding-left: 14rpx;
   font-size: 30rpx;
   display: flex;
   align-items: center;
 }
-
+.heard .city text{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:5rpx;
+}
 .map_container {
   height: 85vh;
   width: 100%;
@@ -45,7 +51,7 @@
   width: 100%;
   display: flex;
   background-color: rgba(222, 227, 235, 0.9);
-  height: 160rpx;
+  height: 180rpx;
   align-items: center;
   position: absolute;
   bottom: 0rpx;
@@ -88,8 +94,8 @@
   opacity: .8;
   background-color: #fff;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10rpx;
+  right: 0rpx;
   display: flex;
   justify-content: center;
   align-items: center;

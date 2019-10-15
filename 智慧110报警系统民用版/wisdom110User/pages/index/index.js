@@ -1,6 +1,7 @@
 // import { startLocationUpdate } from '../../utils/asyncWx.js'
 // 引用百度地图微信小程序JSAPI模块 
 var bmap = require('../../libs/bmap-wx.js');
+import { setStorageUserLocation } from "../../utils/storage.js";
 var wxMarkerData = [];
 Page({
   data: {
@@ -60,7 +61,7 @@ Page({
     };
     let success =  data => {
       wxMarkerData = data.wxMarkerData;
-      wx.setStorageSync("userLocation", wxMarkerData)
+      setStorageUserLocation(wxMarkerData)
       that.setData({
         markers: wxMarkerData,
         longitude: wxMarkerData[0].longitude,
@@ -108,14 +109,6 @@ Page({
     this.setData({
       userShow: !userShow
     })
-    // let animation = wx.createAnimation({
-    //   duration: 400
-    // })
-    // animation.opacity().step();
-    // this.setData({
-    //   userAnimation:animation.export()
-    // })
-    
   },
   // 点击遮罩层关闭侧边菜单
   maskEnter() {
