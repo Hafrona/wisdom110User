@@ -38,3 +38,19 @@ export const stopRecord = (camera) =>{
     })
   })
 }
+//上传个人照片
+export const chooseImage = () =>{
+  return new Promise((resolve,reject) =>{
+    wx.chooseImage({
+      count: 1,
+      sizetype: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success:(result) =>{
+        resolve(result)
+      },
+      fail:(err) =>{
+        reject(err)
+      }
+    })
+  })
+}

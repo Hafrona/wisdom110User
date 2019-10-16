@@ -6,7 +6,7 @@
     <view class='city'>莆田市<text class='iconfont icon-jiantou'></text></view>
   </view>
   <!-- 我的 -->
-  <view class='user' hidden='{{userShow}}' animation="{{userAnimation}}">
+  <view class='user' hidden='{{userShow}}' animatdasd="{{userAnimation}}">
     <view class='user-nav'>
       <view class='user-name'>
         <view class='user-headPortrait'><image src='/static/images/t01d2efb525aecace3c.jpg' mode='widthFix	'></image></view>
@@ -23,15 +23,15 @@
     <view class='user-mask' bindtap='maskEnter'>
     </view>
   </view>
-  <!-- 获取手机号码 -->
+  <!-- 地图 -->
   <view class="map_container">
     <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
     </map>
     <!-- 获取用户手机号码 -->
-    <view class='call-police'>
+    <view class='call-police' hidden='{{true}}'>
       <view class='getPhone'>
         <input placeholder='请输入手机号!' placeholder-style='font-size:28rpx'></input>
-        <button size='mini' bindtap='verificationCode'>获取验证码</button>
+        <button size='mini'>获取验证码</button>
       </view>
     </view>
     <!-- 我要报警按钮 -->

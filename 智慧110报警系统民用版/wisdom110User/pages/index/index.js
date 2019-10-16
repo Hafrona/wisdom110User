@@ -51,6 +51,10 @@ Page({
     that.changeMarkerColor(wxMarkerData, id);
   },
   onLoad: function () {
+    this.newMap()
+  },
+  // 新建百度地图对象
+  newMap(){
     const that = this;
     // 新建百度地图对象 
     let BMap = new bmap.BMapWX({
@@ -59,7 +63,7 @@ Page({
     let fail = function (data) {
       console.log(data)
     };
-    let success =  data => {
+    let success = data => {
       wxMarkerData = data.wxMarkerData;
       setStorageUserLocation(wxMarkerData)
       that.setData({
@@ -67,7 +71,7 @@ Page({
         longitude: wxMarkerData[0].longitude,
         latitude: wxMarkerData[0].latitude,
         rgcData: {
-          address: '您当前的位置：' +  wxMarkerData[0].address,
+          address: '您当前的位置：' + wxMarkerData[0].address,
         }
       });
     }
@@ -78,34 +82,20 @@ Page({
       iconPath: '/static/images/marker_red.png',
       iconTapPath: '/static/images/marker_red.png'
     });
-
   },
-  // 点击显示当前位置
-  // showSearchInfo: function (data, i) {
+  // 地图标记
+  // changeMarkerColor: function (data, i) {
   //   var that = this;
+  //   data.map(v => {
+  //     v.id === i ? v.iconPath = "/static/images/marker_yellow.png" : v.iconPath = "/static/images/marker_red.png";
+  //   })
   //   that.setData({
-  //     rgcData: {
-  //       address: '您当前的位置：' + data[i].address,
-  //       desc: '描述：' + data[i].desc,
-  //     }
+  //     markers: data
   //   });
   // },
-  // 地图标记
-  changeMarkerColor: function (data, i) {
-    var that = this;
-    data.map(v => {
-      v.id === i ? v.iconPath = "/static/images/marker_yellow.png" : v.iconPath = "/static/images/marker_red.png";
-    })
-    that.setData({
-      markers: data
-    });
-  },
-  verificationCode(){
-    
-  },
   // 点击左上角我的，进入我的页面
   user() {
-    let {userShow} = this.data
+    let { userShow } = this.data
     this.setData({
       userShow: !userShow
     })
