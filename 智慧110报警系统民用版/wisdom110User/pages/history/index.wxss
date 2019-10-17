@@ -6,31 +6,30 @@
   padding:10rpx 10rpx;
   box-sizing: border-box;
 }
-.history-incident{ 
-}
 .incident-origin{
   background-color: #fff;
-  height: 60rpx;
-  color:#495259;
+  height: 70rpx;
+  color:#4e5158;
   border-bottom: 2rpx solid #c9d5e1;
   border-top: 2rpx solid #c9d5e1;
   position: relative;
   display: flex;
   align-items: center;
-  padding-left:20rpx;
-  font-size: 36rpx;
+  padding-left:30rpx;
+  font-size: 30rpx;
 }
 .incident-origin >text{
   position: absolute;
   top:15rpx;
   right:20rpx;
+  color: #8395ad;
 }
-.incident-message {
+.unfold-animation {
   animation: unfoldAnimation .5s;
 }
 @keyframes unfoldAnimation{
-  from{opacity: 0}
-  to{opacity: 1}
+  from{transform: translateY(-15rpx);opacity: 0}
+  to{transform: translateY(0rpx);opacity: 1}
 }
 .message-time,.message-site{
   height: 60rpx;
@@ -39,14 +38,32 @@
   color: #8395ad;
   display: flex;
   align-items: center;
-  padding-left:20rpx;
+  padding-left:30rpx;
   box-sizing: border-box;
+  position: relative;
+}
+.message-time:hover,.message-site:hover{
+  color:#067dd9;
+}
+.message-time:hover::after,.message-site:hover::after{
+  content: " ";
+  height: 100%;
+  width: 6rpx;
+  background-color: #067dd9;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.message-time text{
+  padding-left: 7rpx;
+  margin-right: 10rpx;
+}
+.message-site text{
+  margin-right: 10rpx;
+  font-size: 45rpx;
 }
 .incident-bottom{
   height: 60rpx;
    background-color: #fff;
    border-radius: 0 0 20rpx 20rpx;
-}
-.incident-origin>text{
-
 }

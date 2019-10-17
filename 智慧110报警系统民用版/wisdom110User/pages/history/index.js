@@ -24,7 +24,6 @@ Page({
       site: "福建省莆田市城厢区梅园路88号"
     }
     ],
-    animationIndex:"",
   },
   onLoad() {
     var time = util.formatTime(new Date());
@@ -54,7 +53,6 @@ Page({
     }
     this.setData({
       incidentList,
-      animationIndex: index
     })
   },
   // 点击展开动画

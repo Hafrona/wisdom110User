@@ -29,7 +29,7 @@
           <text>警</text>
         </view>
         <view class='police-name'>刘警官
-          <text>5.0</text>
+          <view><text class='iconfont icon-xingxing-shi'></text> 5.0</view>
         </view>
       </view>
       <!-- 头像 -->

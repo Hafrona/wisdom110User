@@ -13,3 +13,17 @@ page{
   padding: 200rpx 0;
   box-sizing: border-box;
 }
+.open-animation{
+  animation: openAnimation .3s ease;
+}
+.close-animation{
+  animation: closeAnimation .3s ease;
+}
+@keyframes openAnimation{
+  0%{transform: translateX(-100vw);opacity:0}
+  100%{transform: translateX(0rpx);opacity: 1}
+}
+@keyframes closeAnimation{
+  0%{transform: translateX(0rpx);opacity:1}
+  100%{transform: translateX(-100vw);opacity: 0}
+}

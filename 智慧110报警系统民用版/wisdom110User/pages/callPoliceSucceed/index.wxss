@@ -143,10 +143,19 @@
 }
 .footer-police-message .police-name{
   font-size: 26rpx; 
+  display: flex;
+  align-items: center;
 }
-.police-name >text{
+.police-name >view{
+  height: 100%;
   margin-left: 30rpx;
   font-size: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.police-name >view text{
+  color:#f9a507;
+  font-size: 26rpx;
 }
 .footer-police .footer-police-HeadPortrait{
   flex: 1;

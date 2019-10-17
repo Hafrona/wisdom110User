@@ -67,19 +67,16 @@
 
 .user .user-name >.icon-star {
   display: inline-block;
-  color: #fe9f07;
+  color: #666;
   border-left: 4rpx solid #999;
   font-size: 20rpx;
   padding: 0 20rpx;
   margin-left: 10rpx;
   
 }
-.icon-star image{
-  width: 20rpx;
-  height: 20rpx;
-}
 .icon-star text{
-  color: #666;
+  color: #fe9f07;
+  font-size: 26rpx;
 }
 .user-serialNum text{
   color: #e00116;

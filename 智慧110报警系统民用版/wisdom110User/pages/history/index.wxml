@@ -10,9 +10,9 @@
         >
         </text>
       </view>
-      <view class='incident-message'  hidden='{{item.unfoldIndex}}'>
-        <view class='message-time'>{{item.time}}</view>
-        <view class='message-site'>{{item.site}}</view>
+      <view class='incident-message unfold-animation'  hidden='{{item.unfoldIndex}}'>
+        <view class='message-time'><text class='iconfont icon-icon-clock'></text>{{item.time}}</view>
+        <view class='message-site'><text class='iconfont icon-dizhi'></text>{{item.site}}</view>
         <view class='incident-bottom'></view>
       </view>
     </view>

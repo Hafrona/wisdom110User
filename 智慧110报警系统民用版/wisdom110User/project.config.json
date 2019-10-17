@@ -93,8 +93,8 @@
 				},
 				{
 					"id": 7,
-					"name": "Demo",
-					"pathName": "pages/demo/index",
+					"name": "地图Demo",
+					"pathName": "pages/mapDemo/index",
 					"query": "",
 					"scene": null
 				}

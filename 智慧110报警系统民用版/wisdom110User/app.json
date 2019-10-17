@@ -7,7 +7,8 @@
     "pages/identity/index",
     "pages/callPoliceSucceed/index",
     "pages/camera/index",
-    "pages/frequentlyLocation/index"
+    "pages/frequentlyLocation/index",
+    "pages/mapDemo/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

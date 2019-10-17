@@ -6,7 +6,7 @@
     <view class='city'>莆田市<text class='iconfont icon-jiantou'></text></view>
   </view>
   <!-- 我的 -->
-  <view class='user' hidden='{{userShow}}' animatdasd="{{userAnimation}}">
+  <view class='user {{ifAnimation? "open-animation":"close-animation"}} ' hidden='{{userShow}}'>
     <view class='user-nav'>
       <view class='user-name'>
         <view class='user-headPortrait'><image src='/static/images/t01d2efb525aecace3c.jpg' mode='widthFix	'></image></view>
@@ -20,12 +20,13 @@
       </view>
       <view class='statement'>法律条款与平台规则 <text class='iconfont icon-jiantou'></text></view>
     </view>
+    <!-- 遮罩层 -->
     <view class='user-mask' bindtap='maskEnter'>
     </view>
   </view>
   <!-- 地图 -->
   <view class="map_container">
-    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
+    <map polyline="{{polyline}}" class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
     </map>
     <!-- 获取用户手机号码 -->
     <view class='call-police' hidden='{{true}}'>

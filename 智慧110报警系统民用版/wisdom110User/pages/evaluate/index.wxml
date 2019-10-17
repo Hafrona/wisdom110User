@@ -17,7 +17,7 @@
         <view class='user'>
           <view class='user-name'>
             <text>刘警官</text>
-            <view class='icon-star'><image src='/static/images/manxing.jpg'></image> <text>5.0</text></view>
+            <view class='icon-star'><text class='iconfont icon-xingxing-shi'></text>5.0</view>
             <text>15单</text>
           </view>
           <view class='user-serialNum'>
