@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+    "Map":"/components/map/map"
   }
 }

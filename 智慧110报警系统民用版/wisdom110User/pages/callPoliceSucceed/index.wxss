@@ -114,6 +114,7 @@
   display: flex;
   align-items: center;
   padding-left:20rpx;
+  font-size: 32rpx;
 }
 /* 底部警察信息及联系方式 */
 .footer{
@@ -126,6 +127,7 @@
   box-sizing: border-box;
   border-bottom: 2rpx solid #97a3b1;
   display: flex;
+  background-color: #cbd3e0;
 }
 .footer-police .footer-police-message{
   flex: 1;
@@ -222,6 +224,8 @@
   background: linear-gradient(#cbd3e0,#ebf0f4);
   display: flex;
   align-items: center;
+  border-top:2rpx solid #ededed;
+  box-sizing: border-box;
 }
 .footer-call{
   display: flex;

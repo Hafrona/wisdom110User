@@ -6,7 +6,7 @@
     <view class='city'>莆田市<text class='iconfont icon-jiantou'></text></view>
   </view>
   <!-- 我的 -->
-  <view class='user {{ifAnimation? "open-animation":"close-animation"}} ' hidden='{{userShow}}'>
+  <view class='user animated {{ifAnimation? "fadeInLeft":"fadeOutLeft"}} ' hidden='{{userShow}}'>
     <view class='user-nav'>
       <view class='user-name'>
         <view class='user-headPortrait'><image src='/static/images/t01d2efb525aecace3c.jpg' mode='widthFix	'></image></view>
@@ -26,8 +26,7 @@
   </view>
   <!-- 地图 -->
   <view class="map_container">
-    <map polyline="{{polyline}}" class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
-    </map>
+    <Map id="map" binduserLocation="userLocationData" userLocation="{{ifMyLocation}}"/>
     <!-- 获取用户手机号码 -->
     <view class='call-police' hidden='{{true}}'>
       <view class='getPhone'>
@@ -44,6 +43,10 @@
           我要报警
         </view>
       </view>
+    </view>
+    <!-- 定位当前位置 -->
+    <view class='mylocation' bindtap='myLocation'>
+      <image src='/static/images/dangqian.jpg'></image>
     </view>
   </view>
   <!-- 底部 -->

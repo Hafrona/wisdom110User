@@ -28,12 +28,33 @@
   border-radius: 0 0 20rpx 20rpx;
   box-shadow: 0rpx 0rpx 20rpx #b3b3b3;
 }
-.user-message .message-input{
+.user-message .message-input ,.message-location{
   height: 20%;
   border-top:4rpx solid #ced5dd;
   padding: 0 20rpx;
   display: flex;
-
+}
+.message-location{
+  align-items: center;
+}
+.message-location picker{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.region{
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  height: 70rpx;
+}
+.arrows{
+  position: absolute;
+  right: 0;
+  top:50%;
+  transform: translateY(-50%) rotate(-90deg);
 }
 .message-input input{
   height: 100%;

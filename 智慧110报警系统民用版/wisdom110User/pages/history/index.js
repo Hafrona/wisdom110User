@@ -40,7 +40,6 @@ Page({
   unfold(data) {
     // 传过来的索引
     const { index } = data.currentTarget.dataset;
-    // 历史纪录的数据
     let { incidentList } = this.data;
     // 当前点击的
     let { unfoldIndex } = incidentList[index];

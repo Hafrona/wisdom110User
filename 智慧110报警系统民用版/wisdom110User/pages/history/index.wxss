@@ -3,7 +3,7 @@
   height: 100vh;
 }
 .incident{
-  padding:10rpx 10rpx;
+  padding:6rpx 6rpx;
   box-sizing: border-box;
 }
 .incident-origin{
@@ -25,11 +25,18 @@
   color: #8395ad;
 }
 .unfold-animation {
-  animation: unfoldAnimation .5s;
+  animation: unfoldAnimation .3s;
 }
 @keyframes unfoldAnimation{
   from{transform: translateY(-15rpx);opacity: 0}
   to{transform: translateY(0rpx);opacity: 1}
+}
+.out-animation{
+  animation:OutAnimation .3s;
+}
+@keyframes OutAnimation{
+  from{transform: translateY(0rpx);opacity: 1}
+  to{transform: translateY(-30rpx);opacity: 0}
 }
 .message-time,.message-site{
   height: 60rpx;
@@ -65,5 +72,5 @@
 .incident-bottom{
   height: 60rpx;
    background-color: #fff;
-   border-radius: 0 0 20rpx 20rpx;
+   border-radius: 0 0 10rpx 10rpx;
 }

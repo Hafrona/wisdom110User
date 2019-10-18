@@ -12,9 +12,14 @@
           <input placeholder='手机号码' name="phone"></input>
           <view>+86<text  class='iconfont icon-jiantou'></text></view>
         </view>
-        <view class='message-input'>
-          <input placeholder='所在地区' name="location"></input>
-          <view><text  class='iconfont icon-jiantou'></text></view>
+        <view class='message-location'>
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}} ">
+            <view class='region'>
+              <text wx:if="{{region.length === 0}}">所在地区</text>
+              <text wx:for="{{region}}" wx:key="index">{{item}},</text>
+            </view>
+            <text class='arrows iconfont icon-jiantou'></text>
+          </picker>
         </view>
         <textarea name="textarea" placeholder='详细地址：如道路，门牌号，小区，楼栋号，单元室内等'></textarea>
       </view>

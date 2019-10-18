@@ -41,12 +41,10 @@
   width: 100%;
   position: relative;
 }
-
-.map {
-  height: 100%;
+Map{
   width: 100%;
+  height: 100%;
 }
-
 .call-police {
   width: 100%;
   display: flex;
@@ -123,11 +121,19 @@
   font-size: 16rpx;
   color: red;
 }
-/* .call-border >view image{
-  width: 100%;
-} */
 .call-police-button .call-border >view text{
     font-size: 50rpx;
+}
+.mylocation{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: 10rpx;
+  left:10rpx;
+}
+.mylocation image{
+  width: 100%;
+  height: 100%;
 }
 .footer {
   height: 8vh;

@@ -5,8 +5,8 @@
     <text class='iconfont icon-jiantou'></text>
   </view>
   <!-- 案件详情 -->
-  <view class='particulars-mask' catchtap='maskShow' hidden="{{classifyParticulars}}">
-    <view class='particulars' catchtap='stopMask'>
+  <view class='particulars-mask' catchtap='maskShow' hidden="{{classifyParticulars}}" >
+    <view class='particulars animated {{ifAnimation?"fadeInDown":"fadeOutUp"}}' catchtap='stopMask' >
       <view class='particulars-title'>详情</view>
       <form>
         <view class='particulars-content'>

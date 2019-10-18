@@ -1,0 +1,4 @@
+<view class="my-map">
+  <map polyline="{{polyline}}" class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap" include-points="{{markers}}" >
+  </map>
+</view>

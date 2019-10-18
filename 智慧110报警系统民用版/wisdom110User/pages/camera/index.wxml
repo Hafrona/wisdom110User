@@ -7,5 +7,4 @@
     </cover-view>
     <cover-image wx:if="{{photoData.length > 0}}" src='{{showPhoto.src}}'></cover-image>
   </camera>
-  <video ></video>
 </view>

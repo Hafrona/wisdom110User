@@ -15,7 +15,8 @@ Page({
     location:"请输入当前地址",
     // 图片
     pic:[],
-    photoData:[]
+    photoData:[],
+    ifAnimation:false
   },
   onLoad(){
     this.location()
@@ -34,8 +35,10 @@ Page({
   },
   // 点击弹框
   openParticulars(){
+    let { ifAnimation } = this.data
     let { classifyParticulars } = this.data
     this.setData({
+      ifAnimation:!ifAnimation,
       classifyParticulars:false
     })
   },
@@ -52,9 +55,16 @@ Page({
   // 点击遮罩层隐藏弹框
   maskShow(){
     let { classifyParticulars } = this.data
+    let { ifAnimation } = this.data
     this.setData({
-      classifyParticulars: true
+      ifAnimation:!ifAnimation
     })
+    setTimeout(()=>{
+      this.setData({
+        classifyParticulars: true
+      })
+    },350)
+    
   },
 
   stopMask(){
@@ -62,6 +72,7 @@ Page({
   // 点击确定按钮跳转
   confirm(){
     this.setData({
+      ifAnimation:false,
       classifyParticulars:true
     })
     wx.navigateTo({
