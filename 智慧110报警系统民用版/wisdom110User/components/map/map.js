@@ -18,7 +18,7 @@ Component({
       {
         address:"东莞市健申大厦",
         alpha:1,
-        iconPath:"/static/images/marker_red.png",
+        iconPath:"/static/images/jingguan.png",
         iconTapPath:"/static/images/manxing.jpg",
         id:0,
         latitude: 23.02272,
@@ -28,7 +28,7 @@ Component({
       {
         address: "东莞山庄",
         alpha: 1,
-        iconPath: "/static/images/marker_red.png",
+        iconPath: "/static/images/jingguan.png",
         iconTapPath: "/static/images/marker_red.png",
         id: 0,
         latitude: 23.02574,
@@ -38,7 +38,7 @@ Component({
       {
         address: "东莞市体育馆",
         alpha: 1,
-        iconPath: "/static/images/marker_red.png",
+        iconPath: "/static/images/jingguan.png",
         iconTapPath: "/static/images/marker_red.png",
         id: 0,
         latitude: 23.02463,
@@ -48,7 +48,7 @@ Component({
       {
         address: "富乐家传统包点",
         alpha: 1,
-        iconPath: "/static/images/marker_red.png",
+        iconPath: "/static/images/jingguan.png",
         iconTapPath: "/static/images/marker_red.png",
         id: 0,
         latitude: 23.02311,
@@ -114,8 +114,8 @@ Component({
         fail: (err) => {
           console.log(err)
         },
-        iconPath: '/static/images/marker_red.png',
-        iconTapPath: '/static/images/marker_red.png'
+        iconPath: '/static/images/jingguan.png',
+        iconTapPath: '/static/images/jingguan.png'
       });
     },
   },

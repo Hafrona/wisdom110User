@@ -21,8 +21,13 @@
 		}
 	},
 	"compileType": "miniprogram",
+<<<<<<< Updated upstream
 	"libVersion": "2.8.3",
 	"appid": "wx4b22719ed73e9560",
+=======
+	"libVersion": "2.8.2",
+	"appid": "wxf0ab060baf2f2335",
+>>>>>>> Stashed changes
 	"projectname": "miniProgram",
 	"debugOptions": {
 		"hidedInDevtools": []
